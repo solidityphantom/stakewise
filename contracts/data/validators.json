@@ -1,0 +1,2908 @@
+{
+  "validators": [
+    {
+      "operator_address": "evmosvaloper1qgnmzn23ksnvg77z33clqqz6sjulw2m37kxtrh",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "GOe99sQtPLjmeQkscbhtwYsvVO+/Bd08XDOCuXzu7KQ="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2111880367023123578949759",
+      "delegator_shares": "2358529451171177681325211.661216402138262865",
+      "description": {
+        "moniker": "rxpwnz ☄️",
+        "identity": "BEC2EF692D99E53E",
+        "website": "https://discordapp.com/users/424964920027774977",
+        "security_contact": "",
+        "details": "rxpwnz validator"
+      },
+      "unbonding_height": "13828999",
+      "unbonding_time": "2023-05-03T02:41:02.421237124Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-02-27T10:36:40.592361529Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1qt9j5cwcne2e6xsjmwx7d3n962c0y3e6q77n2g",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "oqYhd6Lm2bkENIBFF86+FWENuDzJgu9EG800/40JWjA="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000000000000000",
+      "delegator_shares": "1000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "Interop Ventures",
+        "identity": "",
+        "website": "https://interop.ventures",
+        "security_contact": "",
+        "details": "Protocols and primitives"
+      },
+      "unbonding_height": "2267955",
+      "unbonding_time": "2022-07-08T16:20:06.710548665Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-07-01T11:20:42.099667487Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1qvc6jej73armfs5fadn9lprx768f46d9wpd7d7",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "gmQPdgMCMjp/h8Y3bs5jWGOpgM03H1hOLf5BqnfhCio="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2184264073320184199474431",
+      "delegator_shares": "2296831406644156655889970.701965973147780837",
+      "description": {
+        "moniker": " polkachu.com",
+        "identity": "0A6AF02D1557E5B4",
+        "website": "https://polkachu.com",
+        "security_contact": "",
+        "details": "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com"
+      },
+      "unbonding_height": "1779359",
+      "unbonding_time": "2022-06-24T04:01:00.015113086Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-06-05T23:12:01.977696602Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1qkpexhk3vfyexadw2c4f67hrdf98m3muv463qq",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "VR+LjXNtLUXaQQNfR77u90+Vo/zEExOMm3o/Z5dMzSQ="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1519230364877636692658611",
+      "delegator_shares": "1611513179937746352568078.471305437095824617",
+      "description": {
+        "moniker": "Pro-Nodes75",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "Professional validator service. Providing IBC for Evmos. Active participant in Evmos governance. Contact us for any questions in discord: SW33 | pro-nodes#0534, shurinoff#5643"
+      },
+      "unbonding_height": "14307291",
+      "unbonding_time": "2023-05-25T01:11:06.243810757Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-24T14:35:07.148385650Z"
+      },
+      "min_self_delegation": "9000000000000000"
+    },
+    {
+      "operator_address": "evmosvaloper1pfvkp2asnsvsldy0tlhhqlz84ltl3aspgp7x9h",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "nB3rT8LVzUoW+5gINZI8Y29JpSyyHE6KEJeFiPPskt0="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "876639709006450730405390",
+      "delegator_shares": "921811996030728056002165.906785745565509557",
+      "description": {
+        "moniker": "MCB",
+        "identity": "2C079160AC9C286B",
+        "website": "https://mcbnode.com",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "11700479",
+      "unbonding_time": "2023-02-12T16:47:07.230226869Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-21T15:05:01.901756400Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1p3kf0e27y06exx5l9xndrwkh86vl5p5c3qvs9y",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "4H6CUPcc3377Oe/xMNJbgU79LX67AMVqzT5pqATgL6k="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "305078583395621469523273",
+      "delegator_shares": "376759658233223975626477.642108198376780213",
+      "description": {
+        "moniker": "Validatrium",
+        "identity": "9E31CFA37DA22B31",
+        "website": "https://validatrium.com",
+        "security_contact": "",
+        "details": "Stake with us!"
+      },
+      "unbonding_height": "12858466",
+      "unbonding_time": "2023-03-24T23:56:49.679154707Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-01T18:57:30.786820903Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1zp4nrq0g8r5t43lya0ug8tj2auyx7q9q6wpjc2",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "AtCZsefWbwJrdED9kQMhE79nZdz7jWpUAlUpisqh7Ms="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "49500990000000000000000",
+      "delegator_shares": "50001000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "Zhupercycle",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "3399600",
+      "unbonding_time": "2022-07-31T16:27:56.169567919Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.075000000000000000",
+          "max_rate": "0.500000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-07-23T14:53:32.344924555Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1zfehqlqw46m3xjdzakxahtayurpqgs7psmyak6",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "pbVR6O7n79lEK0SIorP8d2mAaWZ9US9eKZTdhOXxDMo="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2079544857770041266372057",
+      "delegator_shares": "2164618882430609541955584.295711741136837312",
+      "description": {
+        "moniker": "alkadeta",
+        "identity": "2D4F5830BB62F73D",
+        "website": "https://alkadeta.com",
+        "security_contact": "",
+        "details": "Comfy staking with minimum fees!"
+      },
+      "unbonding_height": "9079748",
+      "unbonding_time": "2022-11-24T07:29:49.889131945Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-02-28T00:28:17.189906115Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1z4le2xfw4tw0uxp47ct3r8gsr74c5y28ze8zp3",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "3Jq5XCbSeB1sw/1fTys8YrTgMFpEw4R6MHJHE1AD4UY="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "907690703291083661671273",
+      "delegator_shares": "1041424873241091234357561.689426526768087572",
+      "description": {
+        "moniker": "P2P Validator",
+        "identity": "E12F4695036D8072",
+        "website": "https://p2p.org",
+        "security_contact": "",
+        "details": "P2P Validator (P2P.org) - an early Evmos contributor \u0026 long-time Cosmos Ecosystem participant. Stake with us for a secure, reliable and simple service"
+      },
+      "unbonding_height": "8356442",
+      "unbonding_time": "2022-11-08T13:07:10.531348129Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-08T11:11:58.782471078Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1zhrkxxh4xpged743k96smzrxhkmd6vfcxyrx75",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "zvY7mhE2TCgiAEcT8yOl3RrhM0CyEQJWKuD+5aFc6dY="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000010001",
+      "delegator_shares": "1000000000000.010100999897979902",
+      "description": {
+        "moniker": "Tedcrypto",
+        "identity": "6D5F63F1DDCF0404",
+        "website": "https://www.tedcrypto.io/",
+        "security_contact": "support@tedcrypto.io",
+        "details": "TedCrypto community nodes! Join our community, learning and teaching crypto from and to crypto enthusiasts."
+      },
+      "unbonding_height": "579555",
+      "unbonding_time": "2022-04-01T20:50:10.546785479Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-03-01T16:36:23.130935056Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1rq0r53s3wg4854n05tg0hrw5u3jaqlw483z0pg",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "whEONYmps7F5ElSwHnV9Y61h6lyqX5yoYLe1HJnUHpo="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "12859900999998934000",
+      "delegator_shares": "13111017666943385936.586737586287301599",
+      "description": {
+        "moniker": "web34ever",
+        "identity": "52D7E9C59B92F133",
+        "website": "https://web34ever.network/",
+        "security_contact": "",
+        "details": "Building a world where your life belongs to you."
+      },
+      "unbonding_height": "974446",
+      "unbonding_time": "2022-05-02T00:31:19.107063057Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-17T07:19:35.136151510Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1rsl7v8mtun4842kdpw0csv5wp0xzj5v283kk77",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "x86Q/FNj0Bf8HwesgSpJ+kceNxYMboUYXiRV95I4cmY="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "58907261814475987910238",
+      "delegator_shares": "61017034703303317821352.085770689828668391",
+      "description": {
+        "moniker": "BwareLabs",
+        "identity": "E83A08BEEE7A70BD",
+        "website": "https://bwarelabs.com",
+        "security_contact": "",
+        "details": "Guaranteed availability and up-time backed by a professional blockchain infrastructure team."
+      },
+      "unbonding_height": "1722466",
+      "unbonding_time": "2022-06-20T23:43:43.642444480Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-13T11:20:28.681164576Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1rkjsg83wyv67acjc53cgax9nph2z49xf2y0ed2",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "WyMF+sxxcfiucnhGC/E98df/REmzqAJMW7hWAZyBvGA="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "19620000000001000000",
+      "delegator_shares": "20010101010102010095.908580757065863202",
+      "description": {
+        "moniker": "Bitprim",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1425411",
+      "unbonding_time": "2022-06-01T10:21:34.402646110Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-05-12T15:03:20.801492494Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1y8mvmjg848cp9fclnuxtsd4m7led2gk2vex0p5",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Wvnrw0lzWQXeHlsOq+qpeqA6YYarROwlfD0nundU0k0="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000000000000000",
+      "delegator_shares": "1000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "Tendermint 2",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "Test Validator 2"
+      },
+      "unbonding_height": "10014667",
+      "unbonding_time": "2022-12-22T01:00:22.297506745Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-10T12:23:44.142743004Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper19rhppdgm5sj2atx2g257j0cyz8gfypu2u2tyz7",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "asfiD8hIeJB5ix3ZGIn3Y0WmjmJcXTL5L7yEK4Owc3A="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2147253402584454816942957",
+      "delegator_shares": "2168942822584454816942957.000000000000000000",
+      "description": {
+        "moniker": "Qubelabs",
+        "identity": "16DFCF6AF28D699D",
+        "website": "https://qubelabs.io",
+        "security_contact": "",
+        "details": "Independent organization of validators, builders, network contributors and community builders."
+      },
+      "unbonding_height": "14395583",
+      "unbonding_time": "2023-05-28T23:15:28.496891444Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-06-23T21:33:47.478310492Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper199jxpaxgapw0xq973l7n0k4ysr0ghx2mak53gr",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "snNc4r65B1bsI4Kb4tM2gqiAw9VkVcNNN1nN1r+cJVs="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "53910001000000000000",
+      "delegator_shares": "55545454994490914655.641761978018204016",
+      "description": {
+        "moniker": "Galaxias-1",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "974445",
+      "unbonding_time": "2022-05-02T00:31:13.465278599Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-17T10:29:37.894286554Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper19hsc0sq6kym9q03xmjf0c7hzxaarklhvusjtzd",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Tdr7DhLL/+yR8nkW3Lz301usJy96whOvjDD/2LDdyj0="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "78116271766649068659728",
+      "delegator_shares": "78116271766649068659728.000000000000000000",
+      "description": {
+        "moniker": "🐆~LokiTheCat~☯",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "0",
+      "unbonding_time": "1970-01-01T00:00:00Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.500000000000000000",
+          "max_rate": "0.500000000000000000",
+          "max_change_rate": "0.500000000000000000"
+        },
+        "update_time": "2023-02-01T01:39:38.887655028Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper19hma3x88rdxnngwhaec76cm8wlkrccwx5q0h7t",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "3eBeYZ2ytgJeZ79hsS7R0+s8bxZHVIZi/BCXLxgPYzc="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "101940001000000000000",
+      "delegator_shares": "104000001000000000000.000000000000000000",
+      "description": {
+        "moniker": "CipherDogs",
+        "identity": "",
+        "website": "https://validator.cipherdogs.net/",
+        "security_contact": "",
+        "details": "Cyber-crypto team. Decentralization and Distribution."
+      },
+      "unbonding_height": "2211944",
+      "unbonding_time": "2022-07-07T12:16:09.724779852Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-06-24T10:45:46.685835856Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper19edzsptn6t0v7clgyt7v0xs4t6ucw5nf5un6gh",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "dpTxuXbqB+hmuNvNuH7df1QU4z1+5/Lxprl1+m6Ep3o="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "49599100001000000000000",
+      "delegator_shares": "50100100001000000000000.000000000000000000",
+      "description": {
+        "moniker": "EZStaking.io",
+        "identity": "1534523421A364DB",
+        "website": "",
+        "security_contact": "",
+        "details": "Staking Provider https://ezstaking.io"
+      },
+      "unbonding_height": "8041999",
+      "unbonding_time": "2022-11-02T19:34:49.682623933Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-09-14T04:11:45.279866242Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1x9ak0c3dr7lcf3fqg4mgcwr0hgy8pkxx7vxtwj",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "WcrFxenztPv1rWMsy2LvqpC6vAB9ssSSrV5g0/1QNdc="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "694268946491962505263600",
+      "delegator_shares": "791170457139238180396510.640877163609883120",
+      "description": {
+        "moniker": "Oneplus",
+        "identity": "BB66F158BDE9EF96",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "9920011",
+      "unbonding_time": "2022-12-18T18:33:04.138926544Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-04-12T11:53:21.663756436Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1x979v8z50hw4935z4zpza5scrpp2n66c2c67hx",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "e85/ZGYyNPqLG5zDA5e+GzJTQbO61GMaqbb0UKCHL8o="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "68673849999999999978105",
+      "delegator_shares": "73394993423911277140828.603886549033961615",
+      "description": {
+        "moniker": "Plural",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1762551",
+      "unbonding_time": "2022-06-23T15:18:53.548855925Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-08T13:17:20.898250166Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1xkz6jsvjmhh6su8xgencqg72l5n37xa2hcnuxm",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "HFyodeMq4l1Z1n7l9K9sgYKxkkFYsf2eeRU6IgO01gM="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "88410000020940160408200",
+      "delegator_shares": "89303030324181980210303.030303030303030302",
+      "description": {
+        "moniker": "windpowerstake06",
+        "identity": "6B633475425442FA",
+        "website": "http://windpowerstake.com",
+        "security_contact": "windpowerstake@protonmail.com",
+        "details": "windpowerstake measures the power of their nodes"
+      },
+      "unbonding_height": "10014912",
+      "unbonding_time": "2022-12-22T01:12:23.673752640Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.070000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-09T13:29:34.976135071Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1xayy04y04fuk0lqx0lyq698at5fzsjpfvyz9c7",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "YKHF+VXaonaIZ6mP1IGX5YsHL4eHxae3hp2dwY0YsYM="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1961000000000000000",
+      "delegator_shares": "2011090817356205852.674066599394550958",
+      "description": {
+        "moniker": "evmos4val",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "821357",
+      "unbonding_time": "2022-04-20T13:12:37.825723175Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-13T08:46:14.341190074Z"
+      },
+      "min_self_delegation": "10000000000000"
+    },
+    {
+      "operator_address": "evmosvaloper18qsyf6e9qjtky0ttqcw98petdwha69jt0ceyty",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "B8bkxztrmkdGmWeqTTalITrd4KRk0eknWH9XqL1yYKU="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1000000000000",
+      "delegator_shares": "1000000000000.000000000000000000",
+      "description": {
+        "moniker": "Dora Factory",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "Public Good Staking"
+      },
+      "unbonding_height": "0",
+      "unbonding_time": "1970-01-01T00:00:00Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "1.000000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "1.000000000000000000"
+        },
+        "update_time": "2023-02-03T05:45:44.091149045Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper182rn54wqungpxwzwn7f57vyrz34mldxtad33gp",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "XpQAg/jEER2p1dhHh+6CmufyzstqB3+CQRERVShiIVI="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1127071464219354144534507",
+      "delegator_shares": "1296152112291215277605666.751523734500136882",
+      "description": {
+        "moniker": "silent",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "11818233",
+      "unbonding_time": "2023-02-16T14:24:23.350603121Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-09T07:19:12.348042521Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1gxu7cs3hsry3w6506qse9c94vrakllx2jlqh7h",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Ul+8+77luvvDZdabsVtCGA4A2yFXlo+0MFtf7gOQkMA="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "849804689384017305552393",
+      "delegator_shares": "898977534994527127151142.917758303780820715",
+      "description": {
+        "moniker": "Coinbase Cloud",
+        "identity": "E2A5772A111FD119",
+        "website": "coinbase.com/cloud",
+        "security_contact": "security@bisontrails.co",
+        "details": "Coinbase Cloud provides secure and reliable blockchain infrastructure and APIs. Stake your crypto to our enterprise-grade validators."
+      },
+      "unbonding_height": "9581005",
+      "unbonding_time": "2022-12-07T23:38:34.120860721Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.110000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "1.000000000000000000"
+        },
+        "update_time": "2022-04-21T18:57:24.226372935Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1g5decqdpl03tdlpnn3kmzeyxu7xky2q6urpghr",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "AHDpHJibt/QgVa4fiZ2c1kECkARfLoRaOPU53FxipqI="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "13149713429007467046350",
+      "delegator_shares": "14801554772971281604709.560111947956146905",
+      "description": {
+        "moniker": "rubyfun",
+        "identity": "9850C7ADF0132780",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1000277",
+      "unbonding_time": "2022-05-03T19:03:49.091482906Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-05T12:01:30.866435139Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1guygq6l906e5wfw0893kwfex0nvpz6fpgms4tw",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "iCEgYJTRi4sH70DkRjyHFSZnJQdkJV81PIHdkGKp3k8="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "438570001000000000000",
+      "delegator_shares": "443000001000000000000.000000000000000000",
+      "description": {
+        "moniker": "EvmosDAO Testnet",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "6847254",
+      "unbonding_time": "2022-10-10T03:34:42.421724357Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.500000000000000000",
+          "max_rate": "0.500000000000000000",
+          "max_change_rate": "0.200000000000000000"
+        },
+        "update_time": "2022-10-02T22:25:32.912361530Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1ffrc43xaq46mn4jchyyrcmxdhvvh02ar6ldv8t",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "xwDZFa0SnrmOzTT14kK1xfkelBHie9Groem7Eu7rfPc="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "49595266026083320467561",
+      "delegator_shares": "51627852311319121058977.327378907591892808",
+      "description": {
+        "moniker": "H2",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "13828999",
+      "unbonding_time": "2023-05-03T02:41:02.421237124Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-20T13:15:06.019099554Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1ffxy08gc6w6fkke2jn6r0ja359t0wrkm8terqf",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "tQJmN8bmcUd0x1w907p3GIvK9vy7E7cDRYWoFBEsnQ4="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "48602289999999995805696",
+      "delegator_shares": "50089999999999995805696.000000000000000000",
+      "description": {
+        "moniker": "Weakhand",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "13828999",
+      "unbonding_time": "2023-05-03T02:41:02.421237124Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-20T07:06:21.886671659Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1f07zcgah2ahgc3zn4d04wa2kchsxfnfwvxz05p",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "ExCQxIDUtAIiZzb0Wbtlr2RCsOrl7kRRv/XnRhPTBfk="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "83609999429361977407",
+      "delegator_shares": "86156392677816989644.877294346792354316",
+      "description": {
+        "moniker": "imposterkrill",
+        "identity": "F40B10E395FB1570",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "2261357",
+      "unbonding_time": "2022-07-08T13:02:28.777510627Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-06-14T17:33:33.882640686Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1fj4nxt06hgsple32kr9sxezhjtscevardc7d2p",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "KxLfGR43pr693EB4vXSf52TitrW0c8RMjKJhNWATHm8="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1890000000001000000",
+      "delegator_shares": "1928374258135538996.000381882349689669",
+      "description": {
+        "moniker": "evmos❤️ ",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "test"
+      },
+      "unbonding_height": "2923433",
+      "unbonding_time": "2022-07-22T02:41:54.742922355Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-07-06T13:46:14.111556986Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1fhfkklmv764r3u6kqkeflmddr6rlzhf4r9lae6",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "UNfGNcykqeAepKWCIaPzFSN1vG6nORe9G/mZFNdRdko="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1664643481674592414426216",
+      "delegator_shares": "1750401642590740085244994.271197612383597597",
+      "description": {
+        "moniker": "DefierET",
+        "identity": "9B3A3C377A37552D",
+        "website": "https://defier.eeldivad.com/evmostest/validators",
+        "security_contact": "admin@defier.net",
+        "details": ""
+      },
+      "unbonding_height": "8041902",
+      "unbonding_time": "2022-11-02T19:30:48.936647953Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.500000000000000000"
+        },
+        "update_time": "2022-03-03T03:15:29.615867539Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1fe5fkr5xrc0fxhfq2nf0vvzrghra8dtfafkxqx",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "odaRq0iZLN6VhAYcyxeMWffBwXnluhLgpTkeURu+PnM="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "4411170001000000000000",
+      "delegator_shares": "4630370358060662853841.270180939281796370",
+      "description": {
+        "moniker": "azstake",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1377998",
+      "unbonding_time": "2022-05-29T06:19:58.181607085Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-12T02:56:08.790965873Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1f6yhgkek52jz7u25y36vw9qf9vs52sc6hw7hs8",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "bGFhfSvkIIkj44tBluGlRDeKJZg8STjBe72ZL0HZs/0="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "368713720401071031981590",
+      "delegator_shares": "396857884702350488664362.558620109322773194",
+      "description": {
+        "moniker": "hitr",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "8041940",
+      "unbonding_time": "2022-11-02T19:32:20.123836997Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-07T11:38:30.312702680Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper12q62fxyp9rm6edltrn0f3a5r78v22eyecc2w3h",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "5IrigP3maYAEjLkeoWExxUohUPEULQUzzk67FaVE0tY="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "7850012000000000000",
+      "delegator_shares": "8151424427324113243.071801149885051898",
+      "description": {
+        "moniker": "Galaxias",
+        "identity": "64ACD9AC1A15985F",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "937014",
+      "unbonding_time": "2022-04-29T06:46:58.735137418Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-10T14:49:34.288998042Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper12qlxv4u3u4068gclqfy6ngh6p89gsqywl5yvpf",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "1xyC3NdwJeP26a8juHDrNbS6b1gRuXo5b+FehTjTmO0="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "58861120000000000000001",
+      "delegator_shares": "62342019175735283859228.599923284803964299",
+      "description": {
+        "moniker": "DokiaCapital",
+        "identity": "25422F4ADF3F6765",
+        "website": "staking.dokia.cloud",
+        "security_contact": "",
+        "details": "Downtime is not an option for Dokia Capital. We operate an enterprise-grade infrastructure that is robust and secure"
+      },
+      "unbonding_height": "1762552",
+      "unbonding_time": "2022-06-23T15:19:03.722874597Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-16T15:57:37.515987742Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1235qd63f9qxm6hvgef90ra6sjnqup4w5dpux6v",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "ZEODJeMeDPrqGw8NpQVidf3VwK93E+dckmY6DdxEH8g="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "93511144337889314153896",
+      "delegator_shares": "97510970724096061144057.471148260259786734",
+      "description": {
+        "moniker": "SweepStake",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1762552",
+      "unbonding_time": "2022-06-23T15:19:03.722874597Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-14T14:00:25.239062418Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper12cy9zva8ua6nj46fk30p4zuvpfk7xmg3896u72",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "SRWlAXqxJR0KyI2bt62fnCX5Q5D9rxlxBXS0o32xoIM="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "98905001050000500001",
+      "delegator_shares": "105005001050000500001.000000000000000000",
+      "description": {
+        "moniker": "staker-space",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1012750",
+      "unbonding_time": "2022-05-04T15:20:15.484858064Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-11T14:16:56.313374836Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper127svul9tcutef9cks6hurmwey0n2tpfy80gxym",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "FE1wGCvx8pjUHC/AiNB2KlylnXKdwziCRuYNUBcfmGo="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "89293050000999999999999",
+      "delegator_shares": "90195000000999999999999.000000000000000000",
+      "description": {
+        "moniker": "starship-validator",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "12780546",
+      "unbonding_time": "2023-03-22T03:24:17.386760973Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-09-20T18:28:42.461747421Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper127567uge98th4kgkwgvf7xmz0q0gjunutecz4s",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "JIZVePt8r4YQc/hXSgFMluZKvjv2UTjAtmB3LAdPgWE="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "6716753450439530749",
+      "delegator_shares": "6911336466260256661.195214209628888879",
+      "description": {
+        "moniker": "Blockwavelabs",
+        "identity": "",
+        "website": "https://www.blockwavelabs.io/",
+        "security_contact": "",
+        "details": "This is Blockwave Labs validator"
+      },
+      "unbonding_height": "12252013",
+      "unbonding_time": "2023-03-03T13:56:59.813870246Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-12-01T02:41:56.361383148Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1t8rx3v6fgw8gg26zkkjl65nkz0jp8gyhxtntd5",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "E22PIH/2hQ70HmZ+wtQLrPHnIB2f2CUffMUtJQddz2g="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000000000000000",
+      "delegator_shares": "1000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "testval",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "2974089",
+      "unbonding_time": "2022-07-23T03:17:44.915586215Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-07-15T16:24:57.274279340Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1tdxzvx0mcljh29uapd29hqcv7zqhc2enk5tl3s",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "VqPnKbVjtBG2KeTNTY5pti7xAjuRw6UvwzRSRRF2Da0="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "145666000000001000000",
+      "delegator_shares": "150116000000001000000.000000000000000000",
+      "description": {
+        "moniker": "Pearl",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "5324407",
+      "unbonding_time": "2022-09-08T16:18:23.774005469Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-08-22T14:13:07.561150412Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1t3kjzrv29kw2rakhrc0sed3pyg93c04d0358xl",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "+pIMJ/tx6Clp7/Eji0P1lIusbtpgP+lwm0vLJDhIT2E="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "244508073378533490437294",
+      "delegator_shares": "262329293274468921816627.652164067838756811",
+      "description": {
+        "moniker": "Wetez",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "6320398",
+      "unbonding_time": "2022-09-29T01:23:26.241175152Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-24T01:15:21.084906035Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1tuhy9604gc5fsnqjycmemdnlhqjz4v52rnjthf",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Y0UCnjjR9gOrwPlT7CT09Cz6VAo0+9QEJPlWAsohikk="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "39769919999999999000003",
+      "delegator_shares": "41401289066896268021884.723067008503365739",
+      "description": {
+        "moniker": "Simply Staking",
+        "identity": "F74595D6D5D568A2",
+        "website": "https://simply-vc.com.mt",
+        "security_contact": "",
+        "details": "Simply VC runs highly reliable and secure infrastructure in our own datacentre in Malta, built with the aim of supporting the growth of the blockchain ecosystem."
+      },
+      "unbonding_height": "8704976",
+      "unbonding_time": "2022-11-14T20:49:48.334574322Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-07T11:47:41.160795629Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1v3dftmkgk9pe6ssg3y048zvkmxxfl6456glkyw",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "YgXPOFov6QSn7m7NMmMUfPsRlcS4beq9e/VnyluX3c4="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1700002047500000000000000",
+      "delegator_shares": "1700002047500000000000000.000000000000000000",
+      "description": {
+        "moniker": "sleepykitten",
+        "identity": "0F79129686FFEFD4",
+        "website": "https://evmos.info",
+        "security_contact": "",
+        "details": "Kitten powered blocks"
+      },
+      "unbonding_height": "0",
+      "unbonding_time": "1970-01-01T00:00:00Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-09-21T08:50:31.499897772Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1v5s73z7fqv7g0pssmjlzn2lc5yhaux2rtaw59w",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "8jUDoTdlHOl3klA2i2Prdyn4Fz9529e7cBa7P8Sk70I="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990001488055999996",
+      "delegator_shares": "1010102513187878783.838383838383838383",
+      "description": {
+        "moniker": "Tendermint",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "Test Validator"
+      },
+      "unbonding_height": "10014763",
+      "unbonding_time": "2022-12-22T01:05:18.039106684Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-09T14:51:22.042870139Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1v7htqy9358w4r3we2jryh5vlqhxvwjx5xp7rvq",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "p8b73JbXD+JPQtcEGfBk6YQE17aOJ3DMrJEuDZAvuCs="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000000000001000000",
+      "delegator_shares": "1000000000000001000000.000000000000000000",
+      "description": {
+        "moniker": "heisenbug",
+        "identity": "367960C067E253A4",
+        "website": "https://heisenbug.one",
+        "security_contact": "",
+        "details": "Secure and reliable staking"
+      },
+      "unbonding_height": "12138418",
+      "unbonding_time": "2023-02-27T15:16:53.652446067Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.900000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2023-02-02T04:19:40.647710500Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1d9t8ujmypvca4agwwvn5ptv8feg5htnjea5qh5",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "XVPU2NOXxGsPwczlwvBLcJa/R2YpOARQ3AWHdjBRemg="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1449999845078902392882016",
+      "delegator_shares": "1539008697397059252538886.665629203122307225",
+      "description": {
+        "moniker": "anode ☄️",
+        "identity": "B408D693B9E27CB2",
+        "website": "https://twitter.com/alekh_w",
+        "security_contact": "",
+        "details": " Evmos ☄️ fan 👽 Cosmos lover ⚛ Ethereum beginner 🔰 Member of a multi-disciplinary team👏 Validation, coding and creative with fun and responsibilities 🙌 website 🔜 "
+      },
+      "unbonding_height": "3943984",
+      "unbonding_time": "2022-08-11T14:32:55.709462287Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-21T11:46:55.264907899Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1dve5j90n4re93y06hyzatvcsxys8gv63ykpyul",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Dz8N9SMfQGyEXf/jS+ETUIcOunJR0Hj/sZqoBfHSb8c="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "11550000000000000000",
+      "delegator_shares": "12000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "“OrbitalApes”",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "955189",
+      "unbonding_time": "2022-04-30T12:24:29.284575535Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-09T20:00:41.602584777Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1demc2hejademsaapckecmg726zzumc6eh29tfp",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "lfUC/etp0QPwxfRqOY4wA9NllUNKRl+JIwFrfVafwyE="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "12117749946799809929901",
+      "delegator_shares": "12363786690681642974285.343266964471868243",
+      "description": {
+        "moniker": "Tuku Evmos Testnet",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "11156345",
+      "unbonding_time": "2023-01-24T23:50:44.928255541Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.110000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2023-01-09T14:22:17.012075337Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1wfypsa4jh6v9hj00q3ydzkkpl0e5napafpl3zs",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "lpqfe1SxsI+bCrjTAmeqJMxWsmk9Q5W7lyUu04c9ca0="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "100002000000000000",
+      "delegator_shares": "100002000000000000.000000000000000000",
+      "description": {
+        "moniker": "salvage",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "0",
+      "unbonding_time": "1970-01-01T00:00:00Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-25T16:24:20.725908572Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1wvvdsp4jpy2kz9t75dqj5azrvpm8f9yf8jg0ce",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "quvhkQBy6CX/TRfFb0Iv25hI1M0K0/Yzp5p+s1BuSLg="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000000000000000",
+      "delegator_shares": "1000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "Tendermint 3",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "Test Validator 3"
+      },
+      "unbonding_height": "10014994",
+      "unbonding_time": "2022-12-22T01:16:08.308435830Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-11T19:47:40.490823763Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper10g7hsnzht9vxetpz274nmw79txn3pa0sgm49nu",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "C0/5x+84BQF4XKRHpht2daSjx/RWpC53e3EvJuGXtyk="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "53471581000000000000000",
+      "delegator_shares": "56148124528301886792452.830188679245282839",
+      "description": {
+        "moniker": "evmos4val",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1014151",
+      "unbonding_time": "2022-05-04T17:36:30.568768293Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-16T19:19:39.705497881Z"
+      },
+      "min_self_delegation": "100000000000000000"
+    },
+    {
+      "operator_address": "evmosvaloper10t6kyy4jncvnevmgq6q2ntcy90gse3yxa7x2p4",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "4w9a9Q205l0vFfTTc9jmBF0YVnde0N2XojQd4KmP5V0="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2208909947762308431453179",
+      "delegator_shares": "2346080547973387902250787.673721301513975299",
+      "description": {
+        "moniker": "Nodes.Guru",
+        "identity": "28B672FCE6BBD562",
+        "website": "https://stake.nodes.guru",
+        "security_contact": "info@nodes.guru",
+        "details": "Guru of non-custodial staking. Professional node running, low fees, best uptime and 24/7 customer support."
+      },
+      "unbonding_height": "4605002",
+      "unbonding_time": "2022-08-25T01:00:50.046803101Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-02-27T13:08:14.227542229Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1056r9k2z0gw2vkwta9wfh7mm07tq0zd2fmtzyw",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "K0H6blRupjYPGTKsBSvcuX8ZZZhcBR03NaqU5JLW3NU="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "54346700000000000000000",
+      "delegator_shares": "54895650000000000000000.000000000000000000",
+      "description": {
+        "moniker": "DeFi100-iCosmosDAO",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "8041951",
+      "unbonding_time": "2022-11-02T19:32:54.571203889Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-09-22T12:15:16.428751217Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper10kpvz66rs7wqmllwtlh2lfk2azhyjuy8f0dtlp",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "7Yqj/oT5K3J1ibC88EzKokZ0TRsarWCrVrwr8yu2kfs="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "49093230000000000000000",
+      "delegator_shares": "50090020000000000000000.000000000000000000",
+      "description": {
+        "moniker": "Deprecated",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "Please do not delegate"
+      },
+      "unbonding_height": "11212411",
+      "unbonding_time": "2023-01-26T22:31:49.938149522Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-12-28T08:50:55.161136559Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper10eg4e7emgq72k47z4nah004k4zjje74xrlxl64",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "l4JEGrKFbYrKMBVuJxwRonKG+HWc4oMpbSzkEr00OEw="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1979999999995805696",
+      "delegator_shares": "2020201616173497668.545853663156371237",
+      "description": {
+        "moniker": "onestaketest",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "11156476",
+      "unbonding_time": "2023-01-24T23:59:59.033210497Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.200000000000000000",
+          "max_rate": "0.400000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-11-21T13:34:07.635353068Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper10emlr9ycvhgkun73e2mmywwrt7qp5t9vnztd4e",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Pcy2fJz9MxBOyoWwtTb92Oz6RrFqpw5eJHmwxeQOYKc="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "94058910971239700397835",
+      "delegator_shares": "95009000971239700397835.000000000000000000",
+      "description": {
+        "moniker": "Luganodes",
+        "identity": "",
+        "website": "https://www.luganodes.com/",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "12858494",
+      "unbonding_time": "2023-03-24T23:59:08.572072777Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-11-28T02:57:19.280538258Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper10lkr5vh644gd3wmx4nf9pegnzcnlsz67frzevw",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "ZCxxEh0ubke0h2ObtHFTWjotnXwtaPclgn6z5or6E8M="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000005001",
+      "delegator_shares": "1000000000000.002525251249873107",
+      "description": {
+        "moniker": "ProjectStake",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "579521",
+      "unbonding_time": "2022-04-01T20:46:41.367939662Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-02T03:51:54.532377625Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1s95dwnw7vuks688tnzuue0hl6gsczmzjlf759z",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "IKMsTTYJDPesGIRfwoC8Rp0qMs8iUh/v3RRzoIe7qaw="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2160020053112239939885830",
+      "delegator_shares": "2332145068334555730470932.992010678135205203",
+      "description": {
+        "moniker": "DragonStake 🐲",
+        "identity": "EA61A46F31742B22",
+        "website": "https://dragonstake.io",
+        "security_contact": "",
+        "details": "Support your testnet!!"
+      },
+      "unbonding_height": "3381142",
+      "unbonding_time": "2022-07-31T07:31:36.701004112Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "1.000000000000000000"
+        },
+        "update_time": "2022-03-19T08:28:26.089425247Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1sxxkds90aw5kayvj0np4nv39qrsjuv7cvx4xm9",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "JAfB3CjstDRe7teK49w8bKd095GnUg9FsWu7ivVwYH4="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "9900001000000000000",
+      "delegator_shares": "10000001000000000000.000000000000000000",
+      "description": {
+        "moniker": "hrcrxtest",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "6319552",
+      "unbonding_time": "2022-09-29T00:57:20.957173830Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-09-21T19:47:29.764705658Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1s5sckwx0h02xw7qkdyu6auj8vq0a5gcr2u98kc",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "WfsdC2RHN7tLBLwVA27A97pO/PkibwUkVU/e+Nh+M4w="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "98030018670252937004",
+      "delegator_shares": "100020120868823513804.961651093058884635",
+      "description": {
+        "moniker": "KingSuper",
+        "identity": "C8992BB62C009B9F",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "709097",
+      "unbonding_time": "2022-04-13T13:51:52.406920354Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-02-26T19:47:07.762835397Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1s4avugugg9l63kslm4zvage0t6qpryh7el0c00",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "v0Pa/a80gbEJ1ON+g41f4/mRJOYwO/0qn3Vn6AqHNrg="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "4118490000000000000000",
+      "delegator_shares": "6237033114757485504900.964272546395872258",
+      "description": {
+        "moniker": "yieazy",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1230040",
+      "unbonding_time": "2022-05-19T08:44:10.044759501Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-14T09:00:14.901193853Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1sh6nt2lmdt8884uvn8er2vunkaenu5f5d4rjm7",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "bvAsni/TqKzuCClA9nF1NrECgarqv4Y4LqslvhEaB48="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1001199999999992500",
+      "delegator_shares": "1011199999999992500.000000000000000000",
+      "description": {
+        "moniker": "comingPSoonx",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "213218",
+      "unbonding_time": "2022-03-09T16:08:26.884943405Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-01T11:20:37.039577985Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1sckt3mq23kngerp4357awzns7yxcptua4ns5x8",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "ApIgm8bZmXuMFsoy6GnkSmQ8jbUcd50WhY5A1S02vi0="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "9810000000001000000",
+      "delegator_shares": "10000000000001000000.000000000000000000",
+      "description": {
+        "moniker": "ibcc1",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "8704484",
+      "unbonding_time": "2022-11-14T20:27:17.426599565Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-10-27T17:37:42.196073188Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1s7e48w389dnxr70y4rh7w6uh0tlpvvv6e3udwe",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "6/IA4/uGgEf4WDHfwc1s+Ri31CFCTmbLNlzg1t+8wOw="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "164431866937890125219554",
+      "delegator_shares": "167770491856454671938943.434343434343434343",
+      "description": {
+        "moniker": "Paranormal Bros.",
+        "identity": "1CC032445759D103",
+        "website": "https://paranormal-brothers.com",
+        "security_contact": "",
+        "details": "Part of community, part of friends, part of future. Brotherhood."
+      },
+      "unbonding_height": "13335165",
+      "unbonding_time": "2023-04-10T17:30:39.959760596Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-12-22T15:20:22.398737146Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper13g6rwy89n9l5aemn87u3dmpz49q4z0phxhnem7",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "2lhJIlHu9sCTAZGN46v00Ym7U8OpkxkI+d3CqG9ubuw="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "188124476931659139674990",
+      "delegator_shares": "231464067863791813810978.559612867586903214",
+      "description": {
+        "moniker": " AutoStake (Formerly BlockNgine) 🛡️ Slash Protected",
+        "identity": "5DCE5E12052FB516",
+        "website": "https://autostake.net",
+        "security_contact": "support@autostake.net",
+        "details": "100% Refund on ALL forms of slashing backed by a SAFU fund. Enterprise-grade infrastructure distributed across multiple data centers. 💸Auto-Compound with wallet.autostake.net 💸 \u0026 IBC Relayer: ibc.autostake.net \u0026 twitter.com/AutoStake_ \u0026 telegram.me/AutoStake_net"
+      },
+      "unbonding_height": "13214430",
+      "unbonding_time": "2023-04-06T14:59:36.063694022Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.000000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-23T08:14:26.416784057Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper13vfycggnu9hzz8h5x8xvwusl74ha8gw3tj8w7y",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "ywqQc0YLBEHSGYHQg+5U4ZHxQpHiPM1dPvVHBQc7C1g="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1081715035029523848231702",
+      "delegator_shares": "1160553985313046047886900.719599029937178620",
+      "description": {
+        "moniker": "MMS",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "9685089",
+      "unbonding_time": "2022-12-11T06:37:34.483993925Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-20T15:09:45.080276883Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper130ft0rs3530xm272p5yz9wgemcas4nnm9ty5u5",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "SAuK6kbzf1Scpjk9v+te3MZ77WNo9ZNh36T24m8UqRU="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2032841412870066272336057",
+      "delegator_shares": "2735588170958261961765830.249062217379656503",
+      "description": {
+        "moniker": "AM Solutions 🪐",
+        "identity": "5A1DB2A1F7B6A66F",
+        "website": "https://www.theamsolutions.info",
+        "security_contact": "latflat@gmail.com",
+        "details": "The most important is - reliability."
+      },
+      "unbonding_height": "13828895",
+      "unbonding_time": "2023-05-03T02:31:51.609623176Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.300000000000000000",
+          "max_change_rate": "0.200000000000000000"
+        },
+        "update_time": "2022-03-18T06:47:49.178093717Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1jzvy7vshvlw5m6vvp5y7gppqgqrj9ef9c4j2rf",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "AIdhM0uop3Iusq/HKQck/iC2r7TD9en+g3yj8vVxfd8="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "49109943002991720300",
+      "delegator_shares": "49599943002991720300.000000000000000000",
+      "description": {
+        "moniker": "🐚🏝️🌊",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "6177309",
+      "unbonding_time": "2022-09-26T02:14:56.688293897Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.500000000000000000",
+          "max_rate": "0.500000000000000000",
+          "max_change_rate": "0.500000000000000000"
+        },
+        "update_time": "2022-09-18T18:29:44.229315753Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1jxruqmfurgxrem4phvaqxkvprxa6fr0ncg3t88",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "CvkTSL0DmVlbdhJpHzIMtkooOW91H71b5L2bUi3MUFA="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1260999812815741878589161",
+      "delegator_shares": "1494734230377427035379833.903335355160586445",
+      "description": {
+        "moniker": "StakeWithUs",
+        "identity": "609F83752053AD57",
+        "website": "https://stakewith.us",
+        "security_contact": "node@stakewith.us",
+        "details": "Secured Staking Made Easy. Put Your Crypto to Work - Hassle Free. Disclaimer: Delegators should understand that delegation comes with slashing risk. By delegating to StakeWithUs Pte Ltd, you acknowledge that StakeWithUs Pte Ltd is not liable for any losses on your investment."
+      },
+      "unbonding_height": "13828995",
+      "unbonding_time": "2023-05-03T02:40:40.037920919Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-22T01:38:40.843516238Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1jfdvzp4c3a9lc8fegyrl5sf46p59xuh9z4eg93",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "cH1pQWMKT3gc+6FctNU21K9heHwbo28RTNe/7yOg5ps="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "954463384694108587199003",
+      "delegator_shares": "1086967244988010687689429.767058781307114231",
+      "description": {
+        "moniker": "stakingcare",
+        "identity": "D7E2445C15D66B8E",
+        "website": "https://www.stakingcare.com",
+        "security_contact": "stakingcare@gmail.com",
+        "details": "We help regular token holders to profit off their crypto assets. We are non-custodial service."
+      },
+      "unbonding_height": "8041998",
+      "unbonding_time": "2022-11-02T19:34:48.139592294Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-04-07T16:32:08.894948904Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1j6zuz54sum48ylpzjqt4jugjmr4lw6srudv7c4",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "dcKniUZZqF4Z6lZCkPaH6eSI7+iQQsqpOeu1ajHf3Sw="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "965664651382929682644780",
+      "delegator_shares": "1099339005058565066772732.527399424470503279",
+      "description": {
+        "moniker": "cryptobtcbuyer",
+        "identity": "E1A5712F01E07357",
+        "website": "https://github.com/cryptobtcbuyer",
+        "security_contact": "cryptobtcbuyer@gmail.com",
+        "details": "☄️ Evmos Genesis Validator | 🚀 Independent PoS Validator | 🤑 Low fees and Hight Uptime | 💬 24/7 customer support — https://t.me/cryptobtcbuyer"
+      },
+      "unbonding_height": "9020502",
+      "unbonding_time": "2022-11-22T20:25:20.007078296Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-09T20:41:00.557710498Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1j7rrx8pxkhppneaauq63dunydnjq5exw5ar3um",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "SAHyZnbfZcQLnB+4HhOkzUmNQ3aM9KxYZIlannhgdW4="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "4899520000000000000000",
+      "delegator_shares": "4999000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "nysa.network",
+        "identity": "",
+        "website": "https://nysa.network",
+        "security_contact": "",
+        "details": "Safe and Secure validator"
+      },
+      "unbonding_height": "2448492",
+      "unbonding_time": "2022-07-12T10:55:35.290568755Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-07-01T09:34:22.943049451Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1n7qcf9q2ue7xqw2jpsjlfpfluwm6kpvu66hcun",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "6s7Bmwchs0sId8v1ZJIIjUbBKcrmVBNivo2LAm5mL/I="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "30210000000036979788",
+      "delegator_shares": "30510000000036979788.000000000000000000",
+      "description": {
+        "moniker": "Stake-Take",
+        "identity": "4A1DED53D477793B",
+        "website": "https://stake-take.com/",
+        "security_contact": "team7793@stake-take.com",
+        "details": " Trustworthy and high performance validators. Stake with us and Take profit 🚀 "
+      },
+      "unbonding_height": "974445",
+      "unbonding_time": "2022-05-02T00:31:13.465278599Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "1.000000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "1.000000000000000000"
+        },
+        "update_time": "2022-04-18T21:23:23.398468792Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper158wwas4v6fgcu2x3plg70s6u0fm0lle237kltr",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "+Xjt30xLEc8Di0celSAnUSJ17+/3q6hvP8eDHnyUIHE="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "2193566062184588996979025",
+      "delegator_shares": "2367057514081229453615395.408139515950035511",
+      "description": {
+        "moniker": "Alphabet",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "4250376",
+      "unbonding_time": "2022-08-17T19:28:55.092703945Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-23T19:34:32.387364719Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper15jsf7rjva9me2q490va2uvgdkk8x6f0pxlwxql",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "XJ+gFMZZRCvXdmbL+tZummnvOHvRg86v+B/punumCmg="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1000000000000",
+      "delegator_shares": "1000000000000.000000000000000000",
+      "description": {
+        "moniker": "Nodemod",
+        "identity": "",
+        "website": "https://nodemod.xyz",
+        "security_contact": "",
+        "details": "In Crypto Trust"
+      },
+      "unbonding_height": "0",
+      "unbonding_time": "1970-01-01T00:00:00Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-05-12T21:28:04.775105132Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper15hlqak6tvhp5a6umzf50e7xmtd9jn5cyzvcamy",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "pySGTY+1dlEDrIacGX8W2UP6XKWWodrVc3sEB4proxE="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "133974037321621553527848",
+      "delegator_shares": "143738780578032450230138.912269975183532657",
+      "description": {
+        "moniker": "Validatus",
+        "identity": "DEF3590B1DCD96A4",
+        "website": "https://www.validatus.com",
+        "security_contact": "support@validatus.com",
+        "details": "Validatus - verifying blockchain entries on purely Enterprise Linux based systems with regular security audits. Stay safe. Stake with us."
+      },
+      "unbonding_height": "13828377",
+      "unbonding_time": "2023-05-03T01:42:27.611922972Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-09-25T11:48:36.282827091Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper15e3ehzc82z68fx7fl2z9zwpegmsw7xnp2w96x4",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "O2kI9Nu6qvmRuzIK9uG9JLvVYo3RTdGx1E4X/vZZo10="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "9900990099009901",
+      "delegator_shares": "10000000000000000.010000000000000000",
+      "description": {
+        "moniker": "PSoonX",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "579545",
+      "unbonding_time": "2022-04-01T20:49:12.348580012Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-01T00:31:45.200199441Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper156s0k6zhm99trva6ctnsfpp8a76zfxzgtsf8ef",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "GpdpAXEJQerD/s3aJS1mtnrl6EtCdDAPe33cBMZZNXA="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000999999956827",
+      "delegator_shares": "1000000999999956827.000000000000000000",
+      "description": {
+        "moniker": "Errorist",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": "90279C882D58B732"
+      },
+      "unbonding_height": "860948",
+      "unbonding_time": "2022-04-23T05:53:58.036049930Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-15T05:38:36.515336764Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1492mycgzlzw2htuwqdny0r55s5t0zype4m9pzl",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "DQkFZPuALPCWxeUB6jbjeCt9vk2NA4/IAyWDUyssEGU="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "178509873340430358996578",
+      "delegator_shares": "183974073340430358996578.000000000000000000",
+      "description": {
+        "moniker": "Kalia Network",
+        "identity": "3D6E2861B47F2F9F",
+        "website": "https://kalia.network",
+        "security_contact": "info@kalia.network",
+        "details": "Kalia Network validator node. Delegate your tokens and Start Earning Staking Rewards"
+      },
+      "unbonding_height": "13828973",
+      "unbonding_time": "2023-05-03T02:39:01.964553838Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "1.000000000000000000"
+        },
+        "update_time": "2023-02-28T18:19:12.202069288Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper14fp0yd7393rultz74y7m2v2yppkwcvl0a80uf9",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "NSw+tELBwbOV4JeNituNiLYeldezou1TczIyWn1D+eA="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "103235421408310867478772",
+      "delegator_shares": "115301277398169547140207.592607138267297744",
+      "description": {
+        "moniker": "Deimos",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "995209",
+      "unbonding_time": "2022-05-03T10:49:42.441196172Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-02-17T00:00:00Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1426c3rs6fkt8wt4p8w8nl48nn7zpvd0xxvjeq9",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "BmVyUcQzD0N9wBEasjsVBB2VsSout6VRC+HcF4J401s="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "605328404420260267",
+      "delegator_shares": "611381688463845434.227704068832455845",
+      "description": {
+        "moniker": "hitr",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "579558",
+      "unbonding_time": "2022-04-01T20:50:27.584250082Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-02-26T20:19:00.498322539Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper142uggw2c6vp80t50c5wwg38qkrl9f5lqdvc92w",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "k7uX2TsTdTCgkgQkMkcfSXWTsBET680216K2mDkeL18="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1412930014766888232141873",
+      "delegator_shares": "1456178469053491436822172.900862628359883257",
+      "description": {
+        "moniker": "BitNordic.com",
+        "identity": "8620B2B38D72599B",
+        "website": "https://bitnordic.com/",
+        "security_contact": "",
+        "details": "Your partner in Decentralized Finance"
+      },
+      "unbonding_height": "12858493",
+      "unbonding_time": "2023-03-24T23:59:06.912314353Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.100000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-18T07:26:03.430855715Z"
+      },
+      "min_self_delegation": "1000000000000000000000"
+    },
+    {
+      "operator_address": "evmosvaloper144p4mlj9ju8rencusw2835cjmu9yf2v86mc6h8",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "orF8duTCZt5vqO++uDZECOdbf8mC3MvLuvK0kM6yUoA="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "4455819999999999949381",
+      "delegator_shares": "4592116741786680213234.994569457264656629",
+      "description": {
+        "moniker": "my_wallet",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1200052",
+      "unbonding_time": "2022-05-17T08:31:35.110975600Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-07T19:44:29.524632986Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1kqufve24cy96nyv8dq5y483hw0n90n7t690yca",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "FddQFP9m1U+mKn5lk4R9ysib6/lypRVSV1oeVc6T5HQ="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "4371593629090632949249",
+      "delegator_shares": "4573644545198021234742.301398480048050862",
+      "description": {
+        "moniker": "blockscape",
+        "identity": "C46C8329BB5F48D",
+        "website": "https://blockscape.network/",
+        "security_contact": "blockscape@mway.io",
+        "details": "Trusted, non-custodial validator operator with enterprise-grade infrastructure. By delegating, you confirm that you are aware of the risk of slashing and that MWAY GROUP GmbH is not liable for any potential damages to your investment."
+      },
+      "unbonding_height": "1146685",
+      "unbonding_time": "2022-05-13T16:40:16.040648658Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.099900000000000000",
+          "max_rate": "0.399900000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-13T08:30:09.392333124Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1kwye7czzpevxtck74nlhs5epzhmxwy8pu80q38",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Em3+LUT+v7cR5PylGBn86OkQG0vgVhY+xVPyzu1aWM8="
+      },
+      "jailed": false,
+      "status": "BOND_STATUS_BONDED",
+      "tokens": "1496017938196586983547510",
+      "delegator_shares": "1611778124141475351072170.830645435466512561",
+      "description": {
+        "moniker": "Stakely.io",
+        "identity": "55A5F88B4ED52D3E",
+        "website": "https://stakely.io/",
+        "security_contact": "admin@stakely.io",
+        "details": "🔥 Staking insurance fund | Staking guides, videos and FAQ | Skilled team with years of experience"
+      },
+      "unbonding_height": "4576944",
+      "unbonding_time": "2022-08-24T08:42:16.281913707Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-24T13:15:24.994519549Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1kwa370s26z0xafe0qt4f2jq39d8eh45tqkm0me",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "u8X0f7dxcSaTi+G7zkoMhusW31a2r/qU5K8+HegVE00="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "11770000000000000000",
+      "delegator_shares": "12000000000000000000.000000000000000000",
+      "description": {
+        "moniker": "evmos4val",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "822360",
+      "unbonding_time": "2022-04-20T14:42:54.064703103Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-13T13:22:47.143251763Z"
+      },
+      "min_self_delegation": "100000000000000000"
+    },
+    {
+      "operator_address": "evmosvaloper1k3nusdfdfwdmhx4y9e2pvvgqktsux4exf95rjx",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "lHIWH04pPoHaBIJnZAWoJ51zpGBUX/FhFv+J//n3LPg="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "155316032137581059594057",
+      "delegator_shares": "169950230600143863408334.541720908688221350",
+      "description": {
+        "moniker": "777stakes",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "5325001",
+      "unbonding_time": "2022-09-08T16:42:39.834641044Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-07T08:15:35.756725342Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1hdslyd0vwj8ym368tqc5jdpu6hxrqvx9zex5yz",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "WhYCQTbYM9KOPvmtWYHCGh1wIIEhiZYnNXttyxmzP/8="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "990000010001",
+      "delegator_shares": "1000000000000.010100999897979902",
+      "description": {
+        "moniker": "zkvtest",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "631764",
+      "unbonding_time": "2022-04-06T20:53:51.864527894Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-02-28T16:48:36.014590861Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1hdct3ljmss8rwlgf3w4x8l7mvnruzh5mpnl4gu",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "18jFQfugwdL5Qos7a61iaclzDJ3PqTEQe0bVWXniICI="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "9361359999999999939494",
+      "delegator_shares": "9647786216892514446689.222841434718406315",
+      "description": {
+        "moniker": "pathrocknetwork",
+        "identity": "8E9797A900A7A429",
+        "website": "https://pathrocknetwork.org/",
+        "security_contact": "",
+        "details": "Secure Non-Custodial Staking for PoS Blockchain Projects. We run reliable and secure validators and nodes of several different blockchain protocols. Come stake with us!"
+      },
+      "unbonding_height": "1508808",
+      "unbonding_time": "2022-06-06T23:07:25.732646097Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-24T14:30:05.492881236Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1hsyekphfu7hluer4lvdm85u7xz6phjxyj378fk",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "dyedaigbm5+gj6GChU6CET+RDl3Fsc1WJBlcACONlaw="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "978483743118174887666729",
+      "delegator_shares": "1092848787833879855506688.772177469144965482",
+      "description": {
+        "moniker": "x3m",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "8099370",
+      "unbonding_time": "2022-11-03T20:45:55.843587731Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-02-26T21:21:38.734635547Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1hhh6rwzwtu9k3pa48vyf3aukezv0j8703phq92",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "b4uFi5MhYv5H6ret8l5yvK/vdRf46EGXRWLiyGuWQ9I="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "1146767756140537218706329",
+      "delegator_shares": "1215881076035327993626898.021528480970455975",
+      "description": {
+        "moniker": "Staketab",
+        "identity": "D55266E648F3F70B",
+        "website": "",
+        "security_contact": "support@staketab.com",
+        "details": "Staking Provider. Secure and non-custodial staking, Relayers operator, Snapshot service."
+      },
+      "unbonding_height": "8829457",
+      "unbonding_time": "2022-11-17T23:55:32.177118856Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.900000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "update_time": "2022-04-10T05:20:45.890457924Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1h6xks99epx8dgv66vxyt6rt8txszsdnnrqp474",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "qye4bHav2WjBWeoTB/bXQj+77aSy6gTPEsE8OnNHb/8="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "142610200000000001000000",
+      "delegator_shares": "150116000000000001000000.000000000000000000",
+      "description": {
+        "moniker": "Nathalie",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "2496346",
+      "unbonding_time": "2022-07-13T10:45:01.948075050Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-06-30T14:14:57.086614113Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1cpa5rlkxt8x7nu8rnqm9q4wc8qan5ve5cvd8e5",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Z8KthPKAdiMdmSAEnRGSLJlWJZFBIjf+BIslA9RNTz8="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "50884786432057440623909",
+      "delegator_shares": "56246413537974204626237.848664398972109780",
+      "description": {
+        "moniker": "airdropdao",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "6024071",
+      "unbonding_time": "2022-09-22T21:51:56.658140894Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-03-25T11:06:10.827553665Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1crs83cym9s6ref04t5n68cvhkhgg573vhk8pvq",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "e+W3jgvAJ6YJv2eJqjsuTAobAui9t4+//S4P2tOJ7xI="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "140299999999999000000",
+      "delegator_shares": "151999999999999000000.000000000000000000",
+      "description": {
+        "moniker": "JohnnyRuz | STAKE MARS",
+        "identity": "21C3E287B6132753",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "1998283",
+      "unbonding_time": "2022-06-30T23:24:02.428285983Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-20T18:34:46.062791053Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1cxzyhvvane97uz5pxlvllnppqpdmghjccc7gln",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "Ko+xdmL1VTF/fQiFIj+mK6edbfr4a4K1+dAYKwxdJ7I="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "9900006666222253",
+      "delegator_shares": "10000000000000000.151639620227594102",
+      "description": {
+        "moniker": "DEAD",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "709097",
+      "unbonding_time": "2022-04-13T13:51:52.406920354Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.500000000000000000",
+          "max_change_rate": "0.050000000000000000"
+        },
+        "update_time": "2022-03-02T14:06:32.636444616Z"
+      },
+      "min_self_delegation": "1"
+    },
+    {
+      "operator_address": "evmosvaloper1c2qrc0nch90tm05yn335uqnyhwku330t9kreqd",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "NuqsUPSfrGgP8MKk1ZClzESh3QvTiFqlFrohNY8KEYM="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "71919658336048090416937",
+      "delegator_shares": "81130008814178962796107.215515216098742942",
+      "description": {
+        "moniker": "ericet",
+        "identity": "",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "3786493",
+      "unbonding_time": "2022-08-08T10:25:30.071969128Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.050000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-07T16:35:21.644205598Z"
+      },
+      "min_self_delegation": "1000000"
+    },
+    {
+      "operator_address": "evmosvaloper1e3pz6xtpl248lk546xmnvty5c9f8muha4ahxx8",
+      "consensus_pubkey": {
+        "@type": "/cosmos.crypto.ed25519.PubKey",
+        "key": "RHyerQ8G77NdIPzr3qGNOXlM95Pyb9QbFNQngPJQarw="
+      },
+      "jailed": true,
+      "status": "BOND_STATUS_UNBONDED",
+      "tokens": "54988082787926695823",
+      "delegator_shares": "55538082787926695823.000000000000000000",
+      "description": {
+        "moniker": "Appetitoff",
+        "identity": "C58973951B403914",
+        "website": "",
+        "security_contact": "",
+        "details": ""
+      },
+      "unbonding_height": "974445",
+      "unbonding_time": "2022-05-02T00:31:13.465278599Z",
+      "commission": {
+        "commission_rates": {
+          "rate": "0.100000000000000000",
+          "max_rate": "0.200000000000000000",
+          "max_change_rate": "0.010000000000000000"
+        },
+        "update_time": "2022-04-19T15:01:54.934956958Z"
+      },
+      "min_self_delegation": "1000000"
+    }
+  ],
+  "pagination": {
+    "next_key": "FM8K3UeWuXL7qGqCWH87mCD4Z7As",
+    "total": "125"
+  }
+}
