@@ -1,0 +1,24 @@
+.navbar {
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  z-index: 100 !important;
+  height: 72px;
+  z-index: 1;
+  color: white;
+}
+
+.logo {
+  padding-top: 1rem;
+  width: 80px;
+}
+
+.navLeftSection {
+  gap: 1rem;
+}
+
+.connectButton {
+  min-width: 150px !important;
+  background-color: transparent !important;
+}
