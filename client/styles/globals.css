@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+  color: #000000;
+  background-color: #000000 !important;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
