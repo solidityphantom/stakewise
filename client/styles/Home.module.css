@@ -6,3 +6,9 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+.inputBtn {
+  height: 30px !important;
+  width: 50px !important;
+  background-color: rgb(47, 47, 47) !important;
+}
