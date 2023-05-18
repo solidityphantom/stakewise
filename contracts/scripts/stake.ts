@@ -57,7 +57,7 @@ async function main() {
       ethers.utils.formatUnits(delegation3[1][1], 18)
     );
 
-    // Get delegation
+    // Get delegators
     const delegators = await multiStaker.getDelegatorValidators();
     console.log("Delegators: ", delegators);
   } catch (err) {

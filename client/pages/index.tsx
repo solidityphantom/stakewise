@@ -22,20 +22,24 @@ import styles from "@styles/Home.module.css";
 import {
   useAccount,
   useBalance,
-  useContractRead,
   useContractWrite,
   usePrepareContractWrite,
+  useSigner,
 } from "wagmi";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
 import { validators } from "@data/validators.json";
+import validatorsMap from "@data/validatorsMap.json";
 
 function Home() {
   const address = useAccount();
   const { data: balance } = useBalance(address);
   const [amount, setAmount] = useState("0");
+  const { data: signer } = useSigner();
   const [selectedValidators, setSelectedValidators] = useState<string[]>([]);
+  const [delegatedValidators, setDelegatedValidators] = useState<any[]>([]);
+  const [delegationsMap, setDelegationsMap] = useState<any>({});
 
   const handleValidatorCheck = (operator_address: string) => {
     if (selectedValidators.includes(operator_address)) {
@@ -78,6 +82,56 @@ function Home() {
     write: stake,
   } = useContractWrite(stakeConfig);
 
+  const fetchValidators = useCallback(async () => {
+    try {
+      const contract = new ethers.Contract(
+        "0x02a85c9E6D859eAFAC44C3c7DD52Bbe787e54d0A",
+        MultiStaker.abi,
+        signer
+      );
+      const contractWithSigner = contract.connect(signer);
+      const result = await contractWithSigner.getDelegatorValidators();
+      const fetchedValidators = result.map((v) => validatorsMap[v]);
+      setDelegatedValidators(fetchedValidators);
+    } catch (e) {
+      console.log(e);
+    }
+  }, [signer]);
+
+  const fetchDelegation = useCallback(async () => {
+    try {
+      const contract = new ethers.Contract(
+        "0x02a85c9E6D859eAFAC44C3c7DD52Bbe787e54d0A",
+        MultiStaker.abi,
+        signer
+      );
+
+      const contractWithSigner = contract.connect(signer);
+      const newDelegatedValidators = [...delegatedValidators];
+
+      const tempMap = {};
+      for (let i = 0; i < delegatedValidators.length; i++) {
+        const result = await contractWithSigner.getDelegation(
+          delegatedValidators[i].operator_address
+        );
+        console.log(result);
+        const formattedResult = ethers.utils.formatUnits(result[1][1], 18);
+        tempMap[delegatedValidators[i].operator_address] = formattedResult;
+      }
+      setDelegationsMap(tempMap);
+    } catch (e) {
+      console.log(e);
+    }
+  }, [delegatedValidators, signer]);
+
+  useEffect(() => {
+    fetchValidators();
+  }, [signer]);
+
+  useEffect(() => {
+    fetchDelegation();
+  }, [delegatedValidators]);
+
   return (
     <main className={styles.main}>
       <VStack>
@@ -102,42 +156,88 @@ function Home() {
             </InputRightElement>
           </InputGroup>
         </HStack>
-        <TableContainer height="500px" overflowY="scroll">
-          <Table variant="simple">
-            <TableCaption>Validators on tEVMOS</TableCaption>
-            <Thead>
-              <Tr>
-                <Th>Validator</Th>
-                <Th>Tokens</Th>
-                <Th>Commission</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              {validators.map(
-                ({ operator_address, description, tokens, commission }) => (
-                  <Tr
-                    key={operator_address}
-                    onClick={() => handleValidatorCheck(operator_address)}
-                    className={
-                      selectedValidators.includes(operator_address)
-                        ? styles.selected
-                        : undefined
-                    }
-                  >
-                    <Td>{description.moniker}</Td>
-                    <Td>{(Number(tokens) / 1e18).toFixed(2)}</Td>
-                    <Td isNumeric>
-                      {(Number(commission.commission_rates.rate) * 100).toFixed(
-                        2
-                      )}
-                      %
-                    </Td>
-                  </Tr>
-                )
-              )}
-            </Tbody>
-          </Table>
-        </TableContainer>
+        <HStack w="100%" justifyContent="space-around">
+          <Text>Validators on tEVMOS</Text>
+          <Text>My Validators</Text>
+        </HStack>
+        <HStack>
+          <TableContainer height="500px" overflowY="scroll">
+            <Table variant="simple">
+              <TableCaption>Validators on tEVMOS</TableCaption>
+              <Thead>
+                <Tr>
+                  <Th>Validator</Th>
+                  <Th>Tokens</Th>
+                  <Th>Commission</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {validators.map(
+                  ({ operator_address, description, tokens, commission }) => (
+                    <Tr
+                      key={operator_address}
+                      onClick={() => handleValidatorCheck(operator_address)}
+                      className={
+                        selectedValidators.includes(operator_address)
+                          ? styles.selected
+                          : undefined
+                      }
+                    >
+                      <Td>{description.moniker}</Td>
+                      <Td>{(Number(tokens) / 1e18).toFixed(2)}</Td>
+                      <Td isNumeric>
+                        {(
+                          Number(commission.commission_rates.rate) * 100
+                        ).toFixed(2)}
+                        %
+                      </Td>
+                    </Tr>
+                  )
+                )}
+              </Tbody>
+            </Table>
+          </TableContainer>
+          <TableContainer height="500px" overflowY="scroll">
+            <Table variant="simple">
+              <TableCaption>Validators on tEVMOS</TableCaption>
+              <Thead>
+                <Tr>
+                  <Th>Validator</Th>
+                  <Th>Tokens</Th>
+                  <Th>Commission</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {delegatedValidators &&
+                  Object.keys(delegationsMap).length > 0 &&
+                  delegatedValidators.map(
+                    ({ operator_address, description, commission }) => (
+                      <Tr
+                        key={operator_address}
+                        onClick={() => handleValidatorCheck(operator_address)}
+                        className={
+                          selectedValidators.includes(operator_address)
+                            ? styles.selected
+                            : undefined
+                        }
+                      >
+                        <Td>{description.moniker}</Td>
+                        <Td>
+                          {Number(delegationsMap[operator_address]).toFixed(4)}
+                        </Td>
+                        <Td isNumeric>
+                          {(
+                            Number(commission.commission_rates.rate) * 100
+                          ).toFixed(2)}
+                          %
+                        </Td>
+                      </Tr>
+                    )
+                  )}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </HStack>
         <Box h="1rem" />
         <Button bgColor="teal" onClick={() => stake?.()}>
           {isStakeLoading ? <Spinner /> : "Stake"}

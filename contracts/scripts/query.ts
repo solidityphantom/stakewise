@@ -18,16 +18,16 @@ async function main() {
     );
 
     // Get delegation
-    const delegation1 = await multiStaker.getDelegation(validatorAddr1);
-    const delegation2 = await multiStaker.getDelegation(validatorAddr2);
-    console.log(
-      "Delegation 1: ",
-      ethers.utils.formatUnits(delegation1[1][1], 18)
-    );
-    console.log(
-      "Delegation 2: ",
-      ethers.utils.formatUnits(delegation2[1][1], 18)
-    );
+    // const delegation1 = await multiStaker.getDelegation(validatorAddr1);
+    // const delegation2 = await multiStaker.getDelegation(validatorAddr2);
+    // console.log(
+    //   "Delegation 1: ",
+    //   ethers.utils.formatUnits(delegation1[1][1], 18)
+    // );
+    // console.log(
+    //   "Delegation 2: ",
+    //   ethers.utils.formatUnits(delegation2[1][1], 18)
+    // );
 
     // Get delegators
     const delegators = await multiStaker.getDelegatorValidators();
