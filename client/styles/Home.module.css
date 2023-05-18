@@ -11,3 +11,7 @@
   height: 25px !important;
   width: 50px !important;
 }
+
+.selected {
+  background-color: rgb(42, 42, 42) !important;
+}
