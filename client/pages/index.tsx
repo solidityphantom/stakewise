@@ -37,7 +37,7 @@ import {
 import { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
-import { validators } from "@data/validators.json";
+import validators from "@data/validators.json";
 import validatorsMap from "@data/validatorsMap.json";
 import { MdGraphicEq } from "react-icons/md";
 
