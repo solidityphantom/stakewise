@@ -40,6 +40,8 @@ import MultiStaker from "@data/MultiStaker.json";
 import validators from "@data/validators.json";
 import validatorsMap from "@data/validatorsMap.json";
 import { MdGraphicEq } from "react-icons/md";
+import { useConnectModal } from "@rainbow-me/rainbowkit";
+import { ConnectKitButton, useModal } from "connectkit";
 
 function RadioCard(props) {
   const { getInputProps, getRadioProps } = useRadio(props);
@@ -160,7 +162,8 @@ function RangeSelection({ percentile, setPercentile }: any) {
 }
 
 function Home() {
-  const address = useAccount();
+  const { address } = useAccount();
+  const { setOpen } = useModal();
   const { data: balance } = useBalance(address);
   const { data: signer } = useSigner();
   const [amount, setAmount] = useState("0");
@@ -185,7 +188,7 @@ function Home() {
     }
   };
 
-  const maxValue = balance.formatted;
+  const maxValue = balance?.formatted;
 
   const handleMaxClick = () => {
     setAmount(maxValue);
@@ -370,6 +373,21 @@ function Home() {
     fetchDelegation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [delegatedValidators]);
+
+  if (!address) {
+    return (
+      <main className={styles.nullMain}>
+        <VStack>
+          <Text className={styles.nullText}>
+            Connect your wallet to enter the app
+          </Text>
+          <Button className={styles.button} onClick={() => setOpen(true)}>
+            Connect wallet
+          </Button>
+        </VStack>
+      </main>
+    );
+  }
 
   return (
     <main className={styles.main}>

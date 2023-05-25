@@ -3,7 +3,16 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.nullMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4rem;
   min-height: 100vh;
 }
 
@@ -50,4 +59,31 @@
     rgba(217, 217, 217, 0.05) 0%,
     rgba(217, 217, 217, 0) 90.1%
   );
+}
+
+.nullText {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.button {
+  width: 190px !important;
+  height: 52px !important;
+  color: #09182c !important;
+  background: #d9d9d9;
+  border-radius: 30px !important;
+  z-index: 2;
+  transition: all 0.3 ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05); /* make it slightly bigger */
+}
+
+.button:active {
+  transform: scale(0.95); /* make it slightly bigger */
 }

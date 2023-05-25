@@ -4,30 +4,36 @@ import Head from "next/head";
 import { evmosTestnet } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import {
-  darkTheme,
-  getDefaultWallets,
-  RainbowKitProvider,
-} from "@rainbow-me/rainbowkit";
 import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
-import "@rainbow-me/rainbowkit/styles.css";
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import styles from "@styles/Home.module.css";
+import { ConnectKitProvider } from "connectkit";
+import { InjectedConnector } from "wagmi/connectors/injected";
+import { MetaMaskConnector } from "wagmi/connectors/metaMask";
+import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
 
-const { chains, provider } = configureChains(
-  [evmosTestnet],
-  [publicProvider()]
-);
+const { provider } = configureChains([evmosTestnet], [publicProvider()]);
 
-const { connectors } = getDefaultWallets({
-  appName: "Demo app",
-  chains,
+const mm = new MetaMaskConnector({
+  chains: [evmosTestnet],
+});
+
+const cbw = new CoinbaseWalletConnector({
+  chains: [evmosTestnet],
+  options: {
+    appName: "stakewise",
+    jsonRpcUrl: "https://eth.bd.evmos.dev:8545",
+  },
+});
+
+const injected = new InjectedConnector({
+  chains: [evmosTestnet],
 });
 
 const wagmiConfig = createClient({
   autoConnect: true,
-  connectors,
+  connectors: [mm, cbw, injected],
   provider,
 });
 
@@ -47,14 +53,6 @@ const theme = extendTheme({
   },
 });
 
-const rainbowTheme = darkTheme({
-  accentColor: "#7b3fe4",
-  accentColorForeground: "white",
-  borderRadius: "small",
-  fontStack: "system",
-  overlayBlur: "small",
-});
-
 export default function App({ Component, pageProps, router }: AppProps) {
   const [mounted, setMounted] = useState(false);
 
@@ -64,7 +62,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <WagmiConfig client={wagmiConfig}>
-        <RainbowKitProvider chains={chains} theme={rainbowTheme}>
+        <ConnectKitProvider theme="midnight">
           <ChakraProvider theme={theme}>
             <Head>
               <title>Demo app</title>
@@ -76,7 +74,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             <Box className={styles.gradient} />
             <Box className={styles.hero} />
           </ChakraProvider>
-        </RainbowKitProvider>
+        </ConnectKitProvider>
       </WagmiConfig>
     </>
   );

@@ -1,6 +1,6 @@
-.navbar {
+/* .navbar {
   position: absolute;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: 2rem;
   z-index: 100 !important;
@@ -10,7 +10,7 @@
 }
 .logo {
   padding-top: 1rem;
-  width: 80px;
+  width: 150px;
 }
 
 .navLeftSection {
@@ -20,4 +20,36 @@
 .connectButton {
   min-width: 150px !important;
   background-color: transparent !important;
+} */
+
+.navbar {
+  position: relative; /* Needs to be relative for the child's absolute positioning to work correctly */
+  display: flex;
+  justify-content: space-between; /* Pushes children to the start and end */
+  width: 100%;
+  padding-right: 1rem;
+  height: 72px;
+  z-index: 1;
+  color: white;
+}
+
+.logo {
+  position: absolute; /* Absolute positioning related to the parent */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Corrects the offset due to absolute positioning */
+  padding-top: 1rem;
+  width: 150px;
+}
+
+.navLeftSection {
+  gap: 1rem;
+}
+
+.connectButton {
+  min-width: 150px;
+  background-color: transparent;
 }
