@@ -19,8 +19,9 @@ StakeWise offers a streamlined approach to token staking on the EVMOS network. B
 
 StakeWise provides a wealth of features to ensure a comprehensive and user-friendly experience:
 
-1. **MultiStaker:** A smart contract built on the Solidity language for the EVMOS network. It interfaces with Staking and Distribution EVM extension modules to provide a comprehensive toolkit for managing stake-related transactions.
-2. **tEVMOS Delegator Application:** A front-end application built with React, Chakra UI, RainbowKit, Wagmi Hooks, Ethers.js, Next.js, and Vercel. It provides an intuitive interface for managing delegations on the EVMOS Testnet.
+- **Flexible Staking**: StakeWise allows users to balance their stake across multiple validators, reducing the risk of staking on a single validator and potentially increasing staking rewards.
+
+- **Dynamic Validator Selection**: StakeWise offers users the flexibility to select validators based on a range of criteria including their commission rates, the number of tokens they hold, and their jail status. 
 
 - **Approve Methods for Delegation and Withdrawal of Staking Rewards**: Users can approve certain methods necessary for delegating tokens to validators and withdrawing earned rewards.
 
@@ -44,3 +45,4 @@ At a high level, StakeWise operates by interfacing with the EVMOS network via th
 The tEVMOS Delegator Application provides a front-end interface where users can manage their tokens, select validators, and delegate their tokens. It interacts with the MultiStaker contract and EVM extensions to facilitate these operations and fetch relevant data.
 
 The integration of these two components makes StakeWise a comprehensive tool for managing staking operations on the EVMOS network, while fully leveraging the power and flexibility of EVM extensions.
+
