@@ -2,17 +2,8 @@ import {
   Box,
   Button,
   HStack,
-  Input,
-  InputGroup,
-  InputRightElement,
   Link,
-  RangeSlider,
-  RangeSliderFilledTrack,
-  RangeSliderMark,
-  RangeSliderThumb,
-  RangeSliderTrack,
   Spinner,
-  Switch,
   Table,
   TableCaption,
   TableContainer,
@@ -22,8 +13,6 @@ import {
   Th,
   Thead,
   Tr,
-  useRadio,
-  useRadioGroup,
   VStack,
 } from "@chakra-ui/react";
 import styles from "@styles/Home.module.css";
@@ -39,130 +28,11 @@ import { ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
 import validators from "@data/validators.json";
 import validatorsMap from "@data/validatorsMap.json";
-import { MdGraphicEq } from "react-icons/md";
-import { useConnectModal } from "@rainbow-me/rainbowkit";
-import { ConnectKitButton, useModal } from "connectkit";
-
-function RadioCard(props) {
-  const { getInputProps, getRadioProps } = useRadio(props);
-
-  const input = getInputProps();
-  const checkbox = getRadioProps();
-
-  return (
-    <Box as="label">
-      <input {...input} />
-      <Box
-        {...checkbox}
-        cursor="pointer"
-        borderWidth="1px"
-        borderRadius="md"
-        boxShadow="md"
-        _checked={{
-          bg: "teal.600",
-          color: "white",
-          borderColor: "teal.600",
-        }}
-        _focus={{
-          boxShadow: "outline",
-        }}
-        px={5}
-        py={3}
-      >
-        {props.children}
-      </Box>
-    </Box>
-  );
-}
-
-function Selection({ selectedGroup, setSelectedGroup }: any) {
-  const options = ["top", "median", "bottom", "random"];
-
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: "framework",
-    defaultValue: selectedGroup,
-    onChange: setSelectedGroup,
-  });
-
-  const group = getRootProps();
-
-  return (
-    <HStack {...group}>
-      {options.map((value) => {
-        const radio = getRadioProps({ value });
-        return (
-          <RadioCard key={value} {...radio}>
-            {value}
-          </RadioCard>
-        );
-      })}
-    </HStack>
-  );
-}
-
-function SortSelection({ selectedSorting, setSelectedSorting }: any) {
-  const options = ["Tokens", "Commission"];
-
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: "sorting",
-    defaultValue: selectedSorting,
-    onChange: setSelectedSorting,
-  });
-
-  const group = getRootProps();
-
-  return (
-    <HStack {...group}>
-      {options.map((value) => {
-        const radio = getRadioProps({ value });
-        return (
-          <RadioCard key={value} {...radio}>
-            {value}
-          </RadioCard>
-        );
-      })}
-    </HStack>
-  );
-}
-
-function RangeSelection({ percentile, setPercentile }: any) {
-  return (
-    <RangeSlider
-      aria-label={["min", "max"]}
-      defaultValue={[30, 80]}
-      onChange={(val) => setPercentile(val)}
-      width="500px"
-    >
-      <RangeSliderMark value={25} mt="4" ml="-2.5" fontSize="sm">
-        25%
-      </RangeSliderMark>
-      <RangeSliderMark value={50} mt="4" ml="-2.5" fontSize="sm">
-        50%
-      </RangeSliderMark>
-      <RangeSliderMark value={75} mt="4" ml="-2.5" fontSize="sm">
-        75%
-      </RangeSliderMark>
-      <RangeSliderMark value={percentile[0]} className={styles.sliderMark}>
-        {percentile[0]}%
-      </RangeSliderMark>
-      <RangeSliderMark value={percentile[1]} className={styles.sliderMark}>
-        {percentile[1]}%
-      </RangeSliderMark>
-      <RangeSliderTrack bg="red.100">
-        <RangeSliderFilledTrack bg="tomato" />
-      </RangeSliderTrack>
-      <RangeSliderThumb boxSize={6} index={0}>
-        <Box color="tomato" as={MdGraphicEq} />
-      </RangeSliderThumb>
-      <RangeSliderThumb boxSize={6} index={1}>
-        <Box color="tomato" as={MdGraphicEq} />
-      </RangeSliderThumb>
-    </RangeSlider>
-  );
-}
+import { useModal } from "connectkit";
+import AdvancedSelection from "@components/AdvancedSelection";
 
 function Home() {
-  const { address } = useAccount();
+  const address = useAccount();
   const { setOpen } = useModal();
   const { data: balance } = useBalance(address);
   const { data: signer } = useSigner();
@@ -191,15 +61,8 @@ function Home() {
   const maxValue = balance?.formatted;
 
   const handleMaxClick = () => {
+    console.log(balance);
     setAmount(maxValue);
-  };
-
-  const handleAmountChange = (event) => {
-    setAmount(event.target.value);
-  };
-
-  const handleNumValidatorsChange = (event) => {
-    setNumValidators(event.target.value);
   };
 
   const dividedAmount = selectedValidators.length
@@ -308,7 +171,6 @@ function Home() {
         const result = await contractWithSigner.getDelegation(
           delegatedValidators[i].operator_address
         );
-        console.log(result);
         const formattedResult = ethers.utils.formatUnits(result[1][1], 18);
         tempMap[delegatedValidators[i].operator_address] = formattedResult;
       }
@@ -374,7 +236,7 @@ function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [delegatedValidators]);
 
-  if (!address) {
+  if (!address.address) {
     return (
       <main className={styles.nullMain}>
         <VStack>
@@ -392,128 +254,25 @@ function Home() {
   return (
     <main className={styles.main}>
       <VStack>
-        <VStack>
-          <Text>Amount to delegate</Text>
-          <InputGroup>
-            <Input
-              value={amount}
-              onChange={handleAmountChange}
-              placeholder="0"
-              width="300px"
-            />
-            <InputRightElement width="150px">
-              <Button
-                onClick={handleMaxClick}
-                className={styles.inputBtn}
-                bgColor="gray"
-              >
-                MAX
-              </Button>
-              <Text pl=".5rem">tEVMOS</Text>
-            </InputRightElement>
-          </InputGroup>
-        </VStack>
         <Box h="1rem" />
-        <VStack>
-          <Text>Number of Validators</Text>
-          <InputGroup>
-            <Input
-              value={numValidators}
-              onChange={handleNumValidatorsChange}
-              placeholder="0"
-              width="300px"
-              type="number"
-            />
-            <InputRightElement width="150px">
-              <Button
-                onClick={handleMaxClick}
-                className={styles.inputBtn}
-                bgColor="gray"
-              >
-                MAX
-              </Button>
-              <Text pl=".5rem">Validators</Text>
-            </InputRightElement>
-          </InputGroup>
-        </VStack>
-        <Box h="1rem" />
-        <VStack>
-          <Text>Select Delegate Group</Text>
-          <Selection
-            selectedGroup={selectedGroup}
-            setSelectedGroup={handleSelectedGroupChange}
-          />
-        </VStack>
-        <Box h="1rem" />
-        <VStack>
-          <Text>Select By Percentile Range</Text>
-          <Box h="1rem" />
-          <RangeSelection
-            percentile={percentile}
-            setPercentile={setPercentile}
-          />
-          <Button bgColor="teal" onClick={handleRangeConfirm}>
-            Confirm Range
-          </Button>
-        </VStack>
-        <Box h="1rem" />
-        <VStack>
-          <Text>Sort by</Text>
-          <SortSelection
-            selectedSorting={selectedSorting}
-            setSelectedSorting={setSelectedSorting}
-          />
-        </VStack>
-        <Box h="1rem" />
-        <VStack>
-          <Text>Filter out jailed</Text>
-          <Switch onChange={() => setFilterJailed(!filterJailed)} />
-        </VStack>
-        <Box h="1rem" />
+        {/* <AdvancedSelection
+          percentile={percentile}
+          setPercentile={setPercentile}
+          handleRangeConfirm={handleRangeConfirm}
+          selectedSorting={selectedSorting}
+          setSelectedSorting={setSelectedSorting}
+          filterJailed={filterJailed}
+          setFilterJailed={setFilterJailed}
+          filteredValidators={filteredValidators}
+          handleValidatorCheck={handleValidatorCheck}
+          selectedValidators={selectedValidators}
+        /> */}
         <HStack w="100%" justifyContent="space-around">
-          <Text>Validators on tEVMOS</Text>
-          <Text>My Validators</Text>
+          <Text>My current delegation</Text>
         </HStack>
         <HStack>
           <TableContainer height="500px" overflowY="scroll">
             <Table variant="simple">
-              <TableCaption>Validators on tEVMOS</TableCaption>
-              <Thead>
-                <Tr>
-                  <Th>Validator</Th>
-                  <Th>Tokens</Th>
-                  <Th>Commission</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                {filteredValidators.map(
-                  ({ operator_address, description, tokens, commission }) => (
-                    <Tr
-                      key={operator_address}
-                      onClick={() => handleValidatorCheck(operator_address)}
-                      className={
-                        selectedValidators.includes(operator_address)
-                          ? styles.selected
-                          : undefined
-                      }
-                    >
-                      <Td>{description.moniker}</Td>
-                      <Td>{(Number(tokens) / 1e18).toFixed(2)}</Td>
-                      <Td isNumeric>
-                        {(
-                          Number(commission.commission_rates.rate) * 100
-                        ).toFixed(2)}
-                        %
-                      </Td>
-                    </Tr>
-                  )
-                )}
-              </Tbody>
-            </Table>
-          </TableContainer>
-          <TableContainer height="500px" overflowY="scroll">
-            <Table variant="simple">
-              <TableCaption>Validators on tEVMOS</TableCaption>
               <Thead>
                 <Tr>
                   <Th>Validator</Th>
@@ -553,9 +312,20 @@ function Home() {
           </TableContainer>
         </HStack>
         <Box h="1rem" />
-        <Button bgColor="teal" onClick={() => stake?.()}>
-          {isStakeLoading ? <Spinner /> : "Stake"}
-        </Button>
+        <HStack>
+          <Button bgColor="teal" onClick={() => stake?.()}>
+            {isStakeLoading ? <Spinner /> : "Stake"}
+          </Button>
+          <Button bgColor="teal" onClick={() => stake?.()}>
+            {isStakeLoading ? <Spinner /> : "Unstack"}
+          </Button>
+          <Button bgColor="teal" onClick={() => stake?.()}>
+            {isStakeLoading ? <Spinner /> : "Withdraw"}
+          </Button>
+          <Button bgColor="teal" onClick={() => stake?.()}>
+            {isStakeLoading ? <Spinner /> : "Redelegate"}
+          </Button>
+        </HStack>
         {isStakeSuccess && (
           <VStack>
             <Text>Staked successfully!</Text>
@@ -568,7 +338,6 @@ function Home() {
           </VStack>
         )}
       </VStack>
-      <Box h="1rem" />
       <Text className={styles.bold}>
         Built with ❤️ at EVMOS Extensions Hackathon
       </Text>

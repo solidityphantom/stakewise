@@ -5,6 +5,7 @@
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
+  z-index: 10;
 }
 
 .nullMain {
@@ -59,6 +60,7 @@
     rgba(217, 217, 217, 0.05) 0%,
     rgba(217, 217, 217, 0) 90.1%
   );
+  pointer-events: none;
 }
 
 .nullText {
