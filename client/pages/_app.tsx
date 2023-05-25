@@ -9,10 +9,11 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@rainbow-me/rainbowkit/styles.css";
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
+import styles from "@styles/Home.module.css";
 
 const { chains, provider } = configureChains(
   [evmosTestnet],
@@ -72,6 +73,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
             </Head>
             <Navbar />
             <Component {...pageProps} key={router.route} />
+            <Box className={styles.gradient} />
+            <Box className={styles.hero} />
           </ChakraProvider>
         </RainbowKitProvider>
       </WagmiConfig>

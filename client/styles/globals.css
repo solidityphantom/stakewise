@@ -1,9 +1,9 @@
 html,
 body {
   height: 100vh;
-  overflow: scroll;
-  color: #000000;
-  background-color: #000000 !important;
+  overflow: hidden;
+  color: white;
+  background-color: #09182c !important;
   font-family: "Helvetica Neue", sans-serif;
 }
 
