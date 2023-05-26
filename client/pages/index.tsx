@@ -14,7 +14,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import styles from "@styles/Home.module.css";
-import { useAccount, useSigner } from "wagmi";
+import {
+  useAccount,
+  useContractWrite,
+  usePrepareContractWrite,
+  useSigner,
+} from "wagmi";
 import { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
@@ -84,6 +89,92 @@ function Home() {
     }
   }, [delegatedValidators, signer]);
 
+  const { config: unstakeConfig } = usePrepareContractWrite({
+    address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as any,
+    abi: MultiStaker.abi,
+    functionName: "unstakeTokens",
+    args: [
+      selectedValidators,
+      selectedValidators.map((v) => ethers.utils.parseEther(delegationsMap[v])),
+    ],
+  });
+
+  const {
+    data: unstakeTxn,
+    isLoading: isUnstakeLoading,
+    isSuccess: isUnstakeSuccess,
+    write: unstake,
+  } = useContractWrite(unstakeConfig);
+
+  const handleUnstakeTokens = useCallback(() => {
+    if (selectedValidators.length === 0) {
+      toast({
+        position: "bottom",
+        render: () => (
+          <Box p={3} className={styles.toast}>
+            Please select at least one validator to unstake from.
+          </Box>
+        ),
+      });
+    } else {
+      unstake?.();
+    }
+  }, [selectedValidators.length, toast, unstake]);
+
+  const { config: withdrawConfig } = usePrepareContractWrite({
+    address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as any,
+    abi: MultiStaker.abi,
+    functionName: "withdrawRewards",
+    args: [selectedValidators],
+  });
+
+  const {
+    data: withdrawTxn,
+    isLoading: isWithdrawLoading,
+    isSuccess: isWithdrawSuccess,
+    write: withdraw,
+  } = useContractWrite(withdrawConfig);
+
+  // TODO: implement better unstake and withdraw flow
+  const handleWithdrawRewards = useCallback(() => {
+    // if (selectedValidators.length === 0) {
+    toast({
+      position: "bottom",
+      render: () => (
+        <Box p={3} className={styles.toast}>
+          Feature coming soon. Stay tuned!
+        </Box>
+      ),
+    });
+    // } else {
+    //   withdraw?.();
+    // }
+  }, [toast]);
+
+  useEffect(() => {
+    if (isUnstakeSuccess)
+      toast({
+        position: "bottom",
+        render: () => (
+          <Box p={3} className={styles.toast}>
+            Unstake successful!
+          </Box>
+        ),
+      });
+  }, [isUnstakeSuccess, toast]);
+
+  useEffect(() => {
+    if (isWithdrawSuccess)
+      toast({
+        position: "bottom",
+        render: () => (
+          <Box p={3} className={styles.toast}>
+            Withdraw successful!
+          </Box>
+        ),
+      });
+  }, [isWithdrawSuccess, toast]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -100,8 +191,6 @@ function Home() {
     fetchDelegation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [delegatedValidators]);
-
-  console.log(address);
 
   if (!address.address) {
     return (
@@ -123,14 +212,14 @@ function Home() {
       <VStack className={styles.container}>
         <Box h="1rem" />
         <HStack w="100%" justifyContent="space-around">
-          <Text>Current delegation</Text>
+          <Text>Your current delegation</Text>
         </HStack>
         <HStack>
           {isLoading ? (
             <VStack h="480px" justifyContent="center">
               <Spinner size="lg" />
             </VStack>
-          ) : delegatedValidators && Object.keys(delegationsMap).length > 0 ? (
+          ) : delegatedValidators && delegatedValidators.length > 0 ? (
             <TableContainer height="480px" overflowY="scroll">
               <Table variant="simple">
                 <Thead>
@@ -143,8 +232,12 @@ function Home() {
                 <Tbody>
                   {delegatedValidators &&
                     Object.keys(delegationsMap).length > 0 &&
-                    delegatedValidators.map(
-                      ({ operator_address, description, commission }) => (
+                    delegatedValidators
+                      .filter(
+                        (v) =>
+                          Number(delegationsMap[v.operator_address]) > 0.0001
+                      )
+                      .map(({ operator_address, description, commission }) => (
                         <Tr
                           key={operator_address}
                           onClick={() => handleValidatorCheck(operator_address)}
@@ -167,8 +260,7 @@ function Home() {
                             %
                           </Td>
                         </Tr>
-                      )
-                    )}
+                      ))}
                 </Tbody>
               </Table>
             </TableContainer>
@@ -195,24 +287,12 @@ function Home() {
           >
             Stake
           </Button>
-          {["Unstake", "Withdraw", "Redelegate"].map((val) => (
-            <Button
-              key={val}
-              className={styles.homeBtn}
-              onClick={() =>
-                toast({
-                  position: "bottom",
-                  render: () => (
-                    <Box p={3} className={styles.toast}>
-                      Feature coming soon
-                    </Box>
-                  ),
-                })
-              }
-            >
-              {val}
-            </Button>
-          ))}
+          <Button className={styles.homeBtn} onClick={handleUnstakeTokens}>
+            {isUnstakeLoading ? <Spinner color="white" /> : "Unstake"}
+          </Button>
+          <Button className={styles.homeBtn} onClick={handleWithdrawRewards}>
+            {isWithdrawLoading ? <Spinner color="white" /> : "Withdraw Rewards"}
+          </Button>
         </HStack>
       </VStack>
     </main>
