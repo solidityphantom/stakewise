@@ -4,7 +4,7 @@ import Head from "next/head";
 import { evmosTestnet } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Box, ChakraProvider, extendTheme, Text } from "@chakra-ui/react";
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import styles from "@styles/Home.module.css";
@@ -73,6 +73,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             <Component {...pageProps} key={router.route} />
             <Box className={styles.gradient} />
             <Box className={styles.hero} />
+            <Text>Built with ❤️ at EVMOS Extensions Hackathon</Text>
           </ChakraProvider>
         </ConnectKitProvider>
       </WagmiConfig>

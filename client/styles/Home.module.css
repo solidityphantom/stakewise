@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   min-height: 100vh;
   z-index: 10;
 }
@@ -15,6 +15,23 @@
   align-items: center;
   margin-top: -4rem;
   min-height: 100vh;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 530px;
+  height: 640px;
+  background: rgba(9, 24, 44, 0.5);
+  border-radius: 20px;
+  background: linear-gradient(#09182c, #09182c) padding-box,
+    linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.15)
+      )
+      border-box !important;
+  border: 0.5px solid transparent !important;
 }
 
 .inputBtn {
@@ -47,6 +64,7 @@
   background-size: cover;
   transform: rotate(2.02deg);
   opacity: 0.2;
+  pointer-events: none;
 }
 
 .gradient {
@@ -72,6 +90,16 @@
   padding-bottom: 1rem;
 }
 
+.secondaryBtn {
+  width: 190px !important;
+  height: 52px !important;
+  color: #ffffff !important;
+  background: #4a5563 !important;
+  border-radius: 30px !important;
+  z-index: 2;
+  transition: all 0.3 ease-in-out;
+}
+
 .button {
   width: 190px !important;
   height: 52px !important;
@@ -83,9 +111,59 @@
 }
 
 .button:hover {
-  transform: scale(1.05); /* make it slightly bigger */
+  transform: scale(1.05);
 }
 
 .button:active {
-  transform: scale(0.95); /* make it slightly bigger */
+  transform: scale(0.95);
+}
+
+.secondaryBtn:hover {
+  transform: scale(1.05);
+}
+
+.secondaryBtn:active {
+  transform: scale(0.95);
+}
+
+.progressContainer {
+  padding: 2rem;
+  width: 100%;
+}
+
+.progressBarContainer {
+  position: relative;
+  width: 180px;
+  height: 3px;
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 5px;
+}
+
+.progressBar {
+  position: absolute;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.progressBarDividers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.progressBarDivider {
+  background: #09182c;
+  width: 5px;
+  height: 5px;
+}
+
+.stepperHeader {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
 }

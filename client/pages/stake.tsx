@@ -31,6 +31,12 @@ import validatorsMap from "@data/validatorsMap.json";
 import { useModal } from "connectkit";
 import AdvancedSelection from "@components/AdvancedSelection";
 import { useRouter } from "next/router";
+import ProgressBar from "@components/ProgressBar";
+import BasicSelection from "@components/BasicSelection";
+import AmountInput from "@components/AmountInput";
+import ValidatorInput from "@components/ValidatorInput";
+import { title } from "process";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 function Home() {
   const address = useAccount();
@@ -49,6 +55,8 @@ function Home() {
   const [sortedValidators, setSortedValidators] = useState(validators);
   const [filteredValidators, setFilteredValidators] = useState(validators);
   const [filterJailed, setFilterJailed] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isAdvancedSelection, setAdvancedSelection] = useState(false);
 
   const handleValidatorCheck = (operator_address: string) => {
     if (selectedValidators.includes(operator_address)) {
@@ -253,86 +261,78 @@ function Home() {
     );
   }
 
+  const goBack = () => setCurrentStep((prev) => prev - 1);
+  const goToNextStep = () => setCurrentStep((prev) => prev + 1);
+
+  function getComponent() {
+    switch (currentStep) {
+      case 0:
+        return <AmountInput />;
+      case 1:
+        return (
+          <ValidatorInput
+            numValidators={numValidators}
+            setNumValidators={setNumValidators}
+          />
+        );
+      case 2:
+        return !isAdvancedSelection ? (
+          <BasicSelection
+            selectedGroup={selectedGroup}
+            setSelectedGroup={handleSelectedGroupChange}
+          />
+        ) : (
+          <AdvancedSelection
+            percentile={percentile}
+            setPercentile={setPercentile}
+            handleRangeConfirm={handleRangeConfirm}
+            selectedSorting={selectedSorting}
+            setSelectedSorting={setSelectedSorting}
+            filterJailed={filterJailed}
+            setFilterJailed={setFilterJailed}
+            filteredValidators={filteredValidators}
+            handleValidatorCheck={handleValidatorCheck}
+            selectedValidators={selectedValidators}
+          />
+        );
+      case 3:
+        return (
+          <VStack>
+            <Text>Confirm your delegation</Text>
+            <Text>10 EVMOS</Text>
+            <Text>$134.54</Text>
+            <Text>
+              Please review the details of your staking preferences before
+              signing the transaction to process the transaction.
+            </Text>
+          </VStack>
+        );
+      //   case 4:
+      //     return (
+      //       <ReviewCause
+      //         setTxnSuccessful={setTxnSuccessful}
+      //         categories={Object.keys(selectedCategories)}
+      //         country={selectedCountry}
+      //         address={recipient}
+      //         title={title}
+      //         goal={goal}
+      //         description={description}
+      //         files={files}
+      //         saveCause={saveCause}
+      //       />
+      //     );
+    }
+  }
+
   return (
     <main className={styles.main}>
       <VStack className={styles.container}>
-        <Box h="1rem" />
-        {/* <AdvancedSelection
-          percentile={percentile}
-          setPercentile={setPercentile}
-          handleRangeConfirm={handleRangeConfirm}
-          selectedSorting={selectedSorting}
-          setSelectedSorting={setSelectedSorting}
-          filterJailed={filterJailed}
-          setFilterJailed={setFilterJailed}
-          filteredValidators={filteredValidators}
-          handleValidatorCheck={handleValidatorCheck}
-          selectedValidators={selectedValidators}
-        /> */}
-        <HStack w="100%" justifyContent="space-around">
-          <Text>My current delegation</Text>
-        </HStack>
-        <HStack>
-          <TableContainer height="500px" overflowY="scroll">
-            <Table variant="simple">
-              <Thead>
-                <Tr>
-                  <Th>Validator</Th>
-                  <Th>Tokens</Th>
-                  <Th>Commission</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                {delegatedValidators &&
-                  Object.keys(delegationsMap).length > 0 &&
-                  delegatedValidators.map(
-                    ({ operator_address, description, commission }) => (
-                      <Tr
-                        key={operator_address}
-                        onClick={() => handleValidatorCheck(operator_address)}
-                        className={
-                          selectedValidators.includes(operator_address)
-                            ? styles.selected
-                            : undefined
-                        }
-                      >
-                        <Td>{description.moniker}</Td>
-                        <Td>
-                          {Number(delegationsMap[operator_address]).toFixed(4)}
-                        </Td>
-                        <Td isNumeric>
-                          {(
-                            Number(commission.commission_rates.rate) * 100
-                          ).toFixed(2)}
-                          %
-                        </Td>
-                      </Tr>
-                    )
-                  )}
-              </Tbody>
-            </Table>
-          </TableContainer>
+        <HStack className={styles.stepperHeader}>
+          <ChevronLeftIcon boxSize={6} onClick={goBack} />
+          <ProgressBar currentStep={currentStep} totalSteps={4} />
         </HStack>
         <Box h="1rem" />
-        <HStack>
-          <Button
-            bgColor="teal"
-            onClick={() => {
-              router.push("/stake");
-            }}
-          >
-            {isStakeLoading ? <Spinner /> : "Stake"}
-          </Button>
-          <Button bgColor="teal" onClick={() => stake?.()}>
-            {isStakeLoading ? <Spinner /> : "Unstack"}
-          </Button>
-          <Button bgColor="teal" onClick={() => stake?.()}>
-            {isStakeLoading ? <Spinner /> : "Withdraw"}
-          </Button>
-          <Button bgColor="teal" onClick={() => stake?.()}>
-            {isStakeLoading ? <Spinner /> : "Redelegate"}
-          </Button>
-        </HStack>
+        {getComponent()}
         {isStakeSuccess && (
           <VStack>
             <Text>Staked successfully!</Text>
@@ -343,6 +343,31 @@ function Home() {
               View transaction
             </Link>
           </VStack>
+        )}
+        {currentStep === 3 ? (
+          <HStack>
+            <Button className={styles.secondaryBtn} onClick={() => stake?.()}>
+              Cancel
+            </Button>
+            <Button className={styles.button} onClick={() => stake?.()}>
+              Stake
+            </Button>
+          </HStack>
+        ) : (
+          <Button className={styles.button} onClick={goToNextStep}>
+            Continue
+          </Button>
+        )}
+        {currentStep === 2 && !isAdvancedSelection ? (
+          <Text fontSize="14px" onClick={() => setAdvancedSelection(true)}>
+            Advanced selection settings
+          </Text>
+        ) : (
+          currentStep === 2 && (
+            <Text fontSize="14px" onClick={() => setAdvancedSelection(false)}>
+              Basic selection settings
+            </Text>
+          )
         )}
       </VStack>
     </main>
