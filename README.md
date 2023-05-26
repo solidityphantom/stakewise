@@ -1,12 +1,12 @@
 # StakeWise
 
-This project was designed and built specifically for the [EVM Extensions Hackathon](https://dorahacks.io/hackathon/EVM/detail) hosted by the EVMOS Team and Dorahacks.
+This project was designed and built specifically for the [EVM Extensions Hackathon](https://dorahacks.io/hackathon/EVM/detail) hosted by the EVMOS Team and Dorahacks. Watch the full demo video [here](https://youtu.be/MEV2uWKdjW0).
 
 ![](client/public/landing.png)
 
 Deployed `MultiStaker.sol` contract on EVMOS Testnet: [0x02a85c9e6d859eafac44c3c7dd52bbe787e54d0a](https://testnet.escan.live/address/0x02a85c9e6d859eafac44c3c7dd52bbe787e54d0a)
 
-Learn more about the `MultiStaker` contract that powered the platform [here](/contracts/README.md)
+Learn more about the `MultiStaker` contract that powered the platform [here](/contracts/).
 
 ## Overview
 
