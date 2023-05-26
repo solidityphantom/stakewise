@@ -46,10 +46,11 @@
 .sliderMark {
   text-align: center;
   border-radius: 10px;
+  font-size: 11px;
   background-color: white;
-  color: tomato;
-  margin-top: -40px;
-  margin-left: -25px;
+  color: teal;
+  margin-top: -28px;
+  margin-left: -16px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -128,6 +129,7 @@
 
 .progressContainer {
   padding: 2rem;
+  padding-bottom: 1rem;
   width: 100%;
 }
 
@@ -174,6 +176,45 @@
   margin-bottom: -10px !important;
 }
 
+.textContainer {
+  width: 100%;
+  justify-content: center !important;
+}
+
+.validatorInput {
+  height: 100px !important;
+  font-style: normal;
+  font-size: 72px !important;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.25);
+  border: none !important;
+  outline: none !important;
+  text-align: center !important;
+  padding: 0 !important;
+}
+
+.validatorInput:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.validatorInput:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.amountText {
+  font-style: normal;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.25);
+  border: none !important;
+  outline: none !important;
+  text-align: end !important;
+  padding: 0 !important;
+}
+
 .amountInput {
   height: 100px !important;
   font-style: normal;
@@ -211,6 +252,70 @@
   margin-top: 0 !important;
 }
 
+.fiatAmountInputUnitText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.25);
+  margin-top: 0 !important;
+}
+
 .title {
   font-size: 20px;
+  text-align: center;
+  max-width: 330px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  max-width: 440px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.subtitle2 {
+  text-align: center;
+  font-size: 14px;
+  max-width: 460px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.subtitle3 {
+  text-align: center;
+  font-size: 14px;
+  max-width: 460px;
+  padding-bottom: 1rem;
+}
+
+.subtitle4 {
+  text-align: center;
+  font-size: 14px;
+  max-width: 460px;
+}
+
+.radioCard {
+  width: 140px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 30px;
+  background: #09182c;
+  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3 ease-in-out;
+}
+
+.radioCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.filterText {
+  font-size: 13px;
+}
+
+.select {
+  font-size: 13px !important;
+  border-radius: 20px !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+  height: 30px !important;
 }

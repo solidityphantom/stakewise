@@ -1,11 +1,5 @@
-import {
-  VStack,
-  Text,
-  HStack,
-  useRadioGroup,
-  Box,
-  useRadio,
-} from "@chakra-ui/react";
+import { VStack, Text, useRadioGroup, Box, useRadio } from "@chakra-ui/react";
+import styles from "@styles/Home.module.css";
 
 export function RadioCard(props) {
   const { getInputProps, getRadioProps } = useRadio(props);
@@ -19,19 +13,12 @@ export function RadioCard(props) {
       <Box
         {...checkbox}
         cursor="pointer"
-        borderWidth="1px"
-        borderRadius="md"
-        boxShadow="md"
         _checked={{
-          bg: "teal.600",
-          color: "white",
-          borderColor: "teal.600",
-        }}
-        _focus={{
-          boxShadow: "outline",
+          bg: "rgba(255, 255, 255, 0.05)",
         }}
         px={5}
         py={3}
+        className={styles.radioCard}
       >
         {props.children}
       </Box>
@@ -40,7 +27,7 @@ export function RadioCard(props) {
 }
 
 function BasicSelection({ selectedGroup, setSelectedGroup }) {
-  const options = ["top", "median", "bottom", "random"];
+  const options = ["random", "bottom", "median", "top"];
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "framework",
@@ -51,9 +38,10 @@ function BasicSelection({ selectedGroup, setSelectedGroup }) {
   const group = getRootProps();
 
   return (
-    <VStack>
-      <Text>Select Delegate Group</Text>
-      <HStack {...group}>
+    <VStack p=".5rem">
+      <Box h="1rem" />
+      <Text className={styles.title}>Select group by voting power</Text>
+      <VStack {...group} pt="1.5rem">
         {options.map((value) => {
           const radio = getRadioProps({ value });
           return (
@@ -62,7 +50,12 @@ function BasicSelection({ selectedGroup, setSelectedGroup }) {
             </RadioCard>
           );
         })}
-      </HStack>
+        <Text className={styles.subtitle2}>
+          A validator&apos;s voting power is the proportion of total network
+          coins they control, which determines their influence during consensus
+          decisions.
+        </Text>
+      </VStack>
     </VStack>
   );
 }

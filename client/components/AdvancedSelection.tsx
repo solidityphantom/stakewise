@@ -9,153 +9,160 @@ import {
   RangeSliderThumb,
   RangeSliderTrack,
   HStack,
-  Switch,
-  useRadioGroup,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
   Th,
   Thead,
   Tr,
+  Select,
 } from "@chakra-ui/react";
-import { MdGraphicEq } from "react-icons/md";
 import styles from "@styles/Home.module.css";
-import { RadioCard } from "./BasicSelection";
+import { useRef } from "react";
 
-function RangeSelection({ percentile, setPercentile }: any) {
+function RangeSelection({
+  percentile,
+  setPercentile,
+  handleRangeConfirm,
+}: any) {
+  const timerRef = useRef(null);
+
+  const handleRangeChange = (val) => {
+    setPercentile(val);
+
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    timerRef.current = setTimeout(() => {
+      handleRangeConfirm(val);
+    }, 300);
+  };
+
   return (
     <RangeSlider
+      // eslint-disable-next-line jsx-a11y/aria-proptypes
       aria-label={["min", "max"]}
-      defaultValue={[30, 80]}
-      onChange={(val) => setPercentile(val)}
-      width="500px"
+      defaultValue={[percentile[0], percentile[1]]}
+      onChange={handleRangeChange}
+      onBlur={handleRangeConfirm}
+      width="400px"
     >
-      <RangeSliderMark value={25} mt="4" ml="-2.5" fontSize="sm">
-        25%
-      </RangeSliderMark>
-      <RangeSliderMark value={50} mt="4" ml="-2.5" fontSize="sm">
-        50%
-      </RangeSliderMark>
-      <RangeSliderMark value={75} mt="4" ml="-2.5" fontSize="sm">
-        75%
-      </RangeSliderMark>
       <RangeSliderMark value={percentile[0]} className={styles.sliderMark}>
         {percentile[0]}%
       </RangeSliderMark>
       <RangeSliderMark value={percentile[1]} className={styles.sliderMark}>
         {percentile[1]}%
       </RangeSliderMark>
-      <RangeSliderTrack bg="red.100">
-        <RangeSliderFilledTrack bg="tomato" />
+      <RangeSliderTrack bg="rgba(217, 217, 217, 0.25)">
+        <RangeSliderFilledTrack bg="white" />
       </RangeSliderTrack>
-      <RangeSliderThumb boxSize={6} index={0}>
-        <Box color="tomato" as={MdGraphicEq} />
+      <RangeSliderThumb boxSize={3} index={0}>
+        <Box color="white" />
       </RangeSliderThumb>
-      <RangeSliderThumb boxSize={6} index={1}>
-        <Box color="tomato" as={MdGraphicEq} />
+      <RangeSliderThumb boxSize={3} index={1}>
+        <Box color="white" />
       </RangeSliderThumb>
     </RangeSlider>
-  );
-}
-
-function SortSelection({ selectedSorting, setSelectedSorting }: any) {
-  const options = ["Tokens", "Commission"];
-
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: "sorting",
-    defaultValue: selectedSorting,
-    onChange: setSelectedSorting,
-  });
-
-  const group = getRootProps();
-
-  return (
-    <HStack {...group}>
-      {options.map((value) => {
-        const radio = getRadioProps({ value });
-        return (
-          <RadioCard key={value} {...radio}>
-            {value}
-          </RadioCard>
-        );
-      })}
-    </HStack>
   );
 }
 
 function AdvancedSelection({
   percentile,
   setPercentile,
-  handleRangeConfirm,
-  selectedSorting,
   setSelectedSorting,
-  filterJailed,
-  setFilterJailed,
+  setFilter,
   filteredValidators,
   handleValidatorCheck,
   selectedValidators,
+  handleRangeConfirm,
 }) {
   return (
     <VStack>
-      <VStack>
-        <Text>Select By Percentile Range</Text>
-        <Box h="1rem" />
-        <RangeSelection percentile={percentile} setPercentile={setPercentile} />
-        <Button bgColor="teal" onClick={handleRangeConfirm}>
-          Confirm Range
-        </Button>
+      <VStack w="100%" justifyContent="center !important">
+        <Text className={styles.title}>Custom validator selection</Text>
+        <HStack w="100%" justifyContent="space-between">
+          <HStack>
+            <Text className={styles.filterText}>Sort by:</Text>
+            <Select
+              w="180px"
+              className={styles.select}
+              onChange={(e) => setSelectedSorting(e.target.value)}
+            >
+              <option value="desc_tokens">Voting power (desc.)</option>
+              <option value="asc_tokens">Voting power (asc.)</option>
+              <option value="desc_comm">Commission rate (desc.)</option>
+              <option value="asc_comm">Commission rate (asc.)</option>
+            </Select>
+          </HStack>
+          <HStack>
+            <Text className={styles.filterText}>Filter by:</Text>
+            <Select
+              w="120px"
+              className={styles.select}
+              onChange={(e) => setFilter(e.target.value)}
+            >
+              <option value="none">N/A</option>
+              <option value="jail">No jail time</option>
+            </Select>
+          </HStack>
+        </HStack>
+        <TableContainer
+          height="290px"
+          width="440px"
+          overflowY="scroll"
+          style={{ tableLayout: "fixed" }}
+        >
+          <Table variant="simple" size="sm">
+            <Thead>
+              <Tr>
+                <Th>Validator</Th>
+                <Th>Tokens</Th>
+                <Th>Commission</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {filteredValidators.map(
+                ({ operator_address, description, tokens, commission }) => (
+                  <Tr
+                    key={operator_address}
+                    onClick={() => handleValidatorCheck(operator_address)}
+                    className={
+                      selectedValidators.includes(operator_address)
+                        ? styles.selected
+                        : undefined
+                    }
+                  >
+                    <Td>
+                      <div style={{ width: "180px", overflow: "hidden" }}>
+                        {description.moniker}
+                      </div>
+                    </Td>
+                    <Td>{(Number(tokens) / 1e18).toFixed(2)}</Td>
+                    <Td isNumeric>
+                      {(Number(commission.commission_rates.rate) * 100).toFixed(
+                        2
+                      )}
+                      %
+                    </Td>
+                  </Tr>
+                )
+              )}
+            </Tbody>
+          </Table>
+        </TableContainer>
+        <VStack pt=".5rem" pb="0.5rem">
+          <Text className={styles.subtitle3}>
+            Select validators by percentile range
+          </Text>
+          <RangeSelection
+            percentile={percentile}
+            setPercentile={setPercentile}
+            handleRangeConfirm={handleRangeConfirm}
+          />
+        </VStack>
       </VStack>
-      <VStack>
-        <Text>Sort by</Text>
-        <SortSelection
-          selectedSorting={selectedSorting}
-          setSelectedSorting={setSelectedSorting}
-        />
-      </VStack>
-      <Box h="1rem" />
-      <VStack>
-        <Text>Filter out jailed</Text>
-        <Switch onChange={() => setFilterJailed(!filterJailed)} />
-      </VStack>
-      <Box h="1rem" />
-      <TableContainer height="500px" overflowY="scroll">
-        <Table variant="simple">
-          <TableCaption>Validators on tEVMOS</TableCaption>
-          <Thead>
-            <Tr>
-              <Th>Validator</Th>
-              <Th>Tokens</Th>
-              <Th>Commission</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            {filteredValidators.map(
-              ({ operator_address, description, tokens, commission }) => (
-                <Tr
-                  key={operator_address}
-                  onClick={() => handleValidatorCheck(operator_address)}
-                  className={
-                    selectedValidators.includes(operator_address)
-                      ? styles.selected
-                      : undefined
-                  }
-                >
-                  <Td>{description.moniker}</Td>
-                  <Td>{(Number(tokens) / 1e18).toFixed(2)}</Td>
-                  <Td isNumeric>
-                    {(Number(commission.commission_rates.rate) * 100).toFixed(
-                      2
-                    )}
-                    %
-                  </Td>
-                </Tr>
-              )
-            )}
-          </Tbody>
-        </Table>
-      </TableContainer>
     </VStack>
   );
 }

@@ -6,21 +6,30 @@ import {
   Button,
   ButtonGroup,
 } from "@chakra-ui/react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useAccount, useBalance } from "wagmi";
 import styles from "@styles/Home.module.css";
 
-function AmountInput() {
+function AmountInput({
+  amount,
+  setAmount,
+  inputWidth,
+  setInputWidth,
+  fontSize,
+  setFontSize,
+  fiatAmount,
+  setFiatAmount,
+  setError,
+}) {
   const address = useAccount();
   const { data: balance } = useBalance(address);
-  const [inputWidth, setInputWidth] = useState("1ch");
-  const [fontSize, setFontSize] = useState("48px");
-  const [amount, setAmount] = useState("");
-  const [fiatAmount, setFiatAmount] = useState(0);
+  const [selectedPercentage, setSelectedPercentage] = useState(null); // New state for tracking the selected percentage
 
   const handleAmountChange = (event) => {
     const newAmount = event.target.value;
+    setError("");
     setAmount(newAmount);
+    setSelectedPercentage(null);
   };
 
   const handlePercentageClick = useCallback(
@@ -29,10 +38,12 @@ function AmountInput() {
         return;
       }
 
+      setError("");
       const newAmount = Number(balance.formatted) * (percentage / 100);
       setAmount(newAmount.toFixed(2));
+      setSelectedPercentage(percentage);
     },
-    [balance]
+    [balance, setAmount, setError]
   );
 
   useEffect(() => {
@@ -59,12 +70,12 @@ function AmountInput() {
     }
     setInputWidth(`${newWidth}ch`);
     setFontSize(`${newSize}px`);
-  }, [amount]);
+  }, [amount, setFiatAmount, setFontSize, setInputWidth]);
 
   return (
-    <VStack pt="2rem">
+    <VStack pt="4rem">
       <Text className={styles.title}>Enter the amount to stake</Text>
-      <VStack pt="1rem">
+      <VStack pt="2rem">
         <HStack className={styles.inputContainer}>
           <Input
             value={amount}
@@ -86,12 +97,32 @@ function AmountInput() {
           ${fiatAmount.toFixed(2)}
         </Text>
       </VStack>
-      <VStack p="2rem">
+      <VStack p="3rem">
         <ButtonGroup size="sm" isAttached variant="outline">
-          <Button onClick={() => handlePercentageClick(25)}>25%</Button>
-          <Button onClick={() => handlePercentageClick(50)}>50%</Button>
-          <Button onClick={() => handlePercentageClick(75)}>75%</Button>
-          <Button onClick={() => handlePercentageClick(100)}>100%</Button>
+          <Button
+            onClick={() => handlePercentageClick(25)}
+            bg={selectedPercentage === 25 ? "rgba(255,255,255,0.1)" : null}
+          >
+            25%
+          </Button>
+          <Button
+            onClick={() => handlePercentageClick(50)}
+            bg={selectedPercentage === 50 ? "rgba(255,255,255,0.1)" : null}
+          >
+            50%
+          </Button>
+          <Button
+            onClick={() => handlePercentageClick(75)}
+            bg={selectedPercentage === 75 ? "rgba(255,255,255,0.1)" : null}
+          >
+            75%
+          </Button>
+          <Button
+            onClick={() => handlePercentageClick(100)}
+            bg={selectedPercentage === 100 ? "rgba(255,255,255,0.1)" : null}
+          >
+            100%
+          </Button>
         </ButtonGroup>
       </VStack>
     </VStack>
