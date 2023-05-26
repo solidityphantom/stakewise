@@ -36,7 +36,7 @@ function Home() {
   const { setOpen } = useModal();
   const router = useRouter();
   const { data: signer } = useSigner();
-  const [amount, setAmount] = useState("0");
+  const [amount, setAmount] = useState("");
   const [numValidators, setNumValidators] = useState();
   const [selectedValidators, setSelectedValidators] = useState<string[]>([]);
   const [delegatedValidators, setDelegatedValidators] = useState<any[]>([]);
