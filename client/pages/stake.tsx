@@ -28,6 +28,8 @@ import ValidatorInput from "@components/ValidatorInput";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import Confirmation from "@components/Confirmation";
 import { useRouter } from "next/router";
+import SuccessLottie from "@components/SuccessAnimation";
+import Success from "@components/Success";
 
 function Home() {
   const address = useAccount();
@@ -254,6 +256,17 @@ function Home() {
   };
 
   const getComponent = useCallback(() => {
+    if (isStakeSuccess) {
+      return (
+        <Success
+          amount={amount}
+          fiatAmount={fiatAmount}
+          fontSize={fontSize}
+          validatorsMap={validatorsMap}
+          selectedValidators={selectedValidators}
+        />
+      );
+    }
     switch (currentStep) {
       case 0:
         return (
@@ -318,6 +331,7 @@ function Home() {
     handleValidatorCheck,
     inputWidth,
     isAdvancedSelection,
+    isStakeSuccess,
     numValidators,
     percentile,
     selectedGroup,
@@ -342,27 +356,43 @@ function Home() {
   return (
     <main className={styles.main}>
       <VStack className={styles.container}>
-        <HStack className={styles.stepperHeader}>
-          {currentStep > 0 ? (
-            <ChevronLeftIcon boxSize={6} onClick={goBack} cursor="pointer" />
-          ) : (
-            <Box w="26px" />
-          )}
-          <ProgressBar currentStep={currentStep} totalSteps={4} />
-        </HStack>
+        {!isStakeSuccess ? (
+          <HStack className={styles.stepperHeader}>
+            {currentStep > 0 ? (
+              <ChevronLeftIcon boxSize={6} onClick={goBack} cursor="pointer" />
+            ) : (
+              <Box w="26px" />
+            )}
+            <ProgressBar currentStep={currentStep} totalSteps={4} />
+          </HStack>
+        ) : (
+          <Box h="3rem" />
+        )}
         {getComponent()}
-        {isStakeSuccess && (
-          <VStack>
-            <Text>Staked successfully!</Text>
+        {isStakeSuccess ? (
+          <HStack>
+            <Button className={styles.secondaryBtn} onClick={goHome}>
+              Go to home
+            </Button>
             <Link
-              href={`https://testnet.escan.live/tx/${stakeTxn.hash}`}
+              href={`https://testnet.escan.live/tx/${
+                stakeTxn ? stakeTxn.hash : ""
+              }`}
               isExternal
             >
-              View transaction
+              <Button className={styles.button}>View transaction</Button>
             </Link>
-          </VStack>
-        )}
-        {currentStep === 3 ? (
+          </HStack>
+        ) : currentStep === 0 ? (
+          <HStack>
+            <Button className={styles.secondaryBtn} onClick={goHome}>
+              Cancel
+            </Button>
+            <Button className={styles.button} onClick={goToNextStep}>
+              Continue
+            </Button>
+          </HStack>
+        ) : currentStep === 3 ? (
           <HStack>
             <Button className={styles.secondaryBtn} onClick={goHome}>
               Cancel
@@ -399,6 +429,11 @@ function Home() {
           <Text color="red" fontSize="14px" pt="0.5rem">
             {error}
           </Text>
+        )}
+        {isStakeSuccess && (
+          <VStack className={styles.animationContainer}>
+            <SuccessLottie />
+          </VStack>
         )}
       </VStack>
     </main>
