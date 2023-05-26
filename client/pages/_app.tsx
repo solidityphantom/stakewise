@@ -12,6 +12,7 @@ import { ConnectKitProvider } from "connectkit";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
 const { provider } = configureChains([evmosTestnet], [publicProvider()]);
 
@@ -37,6 +38,25 @@ const wagmiConfig = createClient({
   provider,
 });
 
+const outline = defineStyle({
+  borderColor: "rgba(255,255,255,0.1)",
+  borderRadius: "20px",
+  width: "80px",
+  _hover: {
+    backgroundColor: "rgba(255,255,255,0.1)",
+  },
+  _active: {
+    backgroundColor: "rgba(255,255,255,0.2)",
+  },
+  _selected: {
+    backgroundColor: "rgba(255,255,255,0.1)",
+  },
+});
+
+const buttonTheme = defineStyleConfig({
+  variants: { outline },
+});
+
 const theme = extendTheme({
   styles: {
     global: {
@@ -51,6 +71,7 @@ const theme = extendTheme({
       },
     },
   },
+  components: { Button: buttonTheme },
 });
 
 export default function App({ Component, pageProps, router }: AppProps) {

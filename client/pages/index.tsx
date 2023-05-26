@@ -257,18 +257,6 @@ function Home() {
     <main className={styles.main}>
       <VStack className={styles.container}>
         <Box h="1rem" />
-        {/* <AdvancedSelection
-          percentile={percentile}
-          setPercentile={setPercentile}
-          handleRangeConfirm={handleRangeConfirm}
-          selectedSorting={selectedSorting}
-          setSelectedSorting={setSelectedSorting}
-          filterJailed={filterJailed}
-          setFilterJailed={setFilterJailed}
-          filteredValidators={filteredValidators}
-          handleValidatorCheck={handleValidatorCheck}
-          selectedValidators={selectedValidators}
-        /> */}
         <HStack w="100%" justifyContent="space-around">
           <Text>My current delegation</Text>
         </HStack>

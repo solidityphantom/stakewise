@@ -324,11 +324,17 @@ function Home() {
     }
   }
 
+  console.log("currentStep: ", currentStep);
+
   return (
     <main className={styles.main}>
       <VStack className={styles.container}>
         <HStack className={styles.stepperHeader}>
-          <ChevronLeftIcon boxSize={6} onClick={goBack} />
+          {currentStep > 0 ? (
+            <ChevronLeftIcon boxSize={6} onClick={goBack} cursor="pointer" />
+          ) : (
+            <Box w="26px" />
+          )}
           <ProgressBar currentStep={currentStep} totalSteps={4} />
         </HStack>
         <Box h="1rem" />
