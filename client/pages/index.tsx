@@ -101,6 +101,8 @@ function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [delegatedValidators]);
 
+  console.log(address);
+
   if (!address.address) {
     return (
       <main className={styles.nullMain}>
@@ -114,10 +116,6 @@ function Home() {
         </VStack>
       </main>
     );
-  }
-
-  if (!delegatedValidators || delegatedValidators.length === 0) {
-    <Spinner size="lg" />;
   }
 
   return (

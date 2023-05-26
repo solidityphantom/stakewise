@@ -2,6 +2,8 @@
 
 This project was built for the [EVM Extensions Hackathon](https://dorahacks.io/hackathon/EVM/detail) hosted by the Evmos Team and Dorahacks.
 
+![](client/public/landing.png)
+
 ## Overview
 
 StakeWise is a practical tool that facilitates seamless staking operations on the EVMOS network. The platform consists of two core components: the `MultiStaker` smart contract and the `tEVMOS Delegator Application`. These tools work in tandem to allow users to easily delegate their tokens across multiple validators according to their preferences.
