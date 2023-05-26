@@ -2,10 +2,8 @@ import {
   Box,
   Button,
   HStack,
-  Link,
   Spinner,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
@@ -16,39 +14,25 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import styles from "@styles/Home.module.css";
-import {
-  useAccount,
-  useBalance,
-  useContractWrite,
-  usePrepareContractWrite,
-  useSigner,
-} from "wagmi";
+import { useAccount, useSigner } from "wagmi";
 import { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
-import validators from "@data/validators.json";
 import validatorsMap from "@data/validatorsMap.json";
 import { useModal } from "connectkit";
-import AdvancedSelection from "@components/AdvancedSelection";
 import { useRouter } from "next/router";
+import { useToast } from "@chakra-ui/react";
 
 function Home() {
   const address = useAccount();
   const router = useRouter();
   const { setOpen } = useModal();
-  const { data: balance } = useBalance(address);
   const { data: signer } = useSigner();
-  const [amount, setAmount] = useState("0");
-  const [numValidators, setNumValidators] = useState(0);
   const [selectedValidators, setSelectedValidators] = useState<string[]>([]);
   const [delegatedValidators, setDelegatedValidators] = useState<any[]>([]);
   const [delegationsMap, setDelegationsMap] = useState<any>({});
-  const [selectedGroup, setSelectedGroup] = useState("median");
-  const [percentile, setPercentile] = useState([30, 80]);
-  const [selectedSorting, setSelectedSorting] = useState("Tokens");
-  const [sortedValidators, setSortedValidators] = useState(validators);
-  const [filteredValidators, setFilteredValidators] = useState(validators);
-  const [filterJailed, setFilterJailed] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const toast = useToast();
 
   const handleValidatorCheck = (operator_address: string) => {
     if (selectedValidators.includes(operator_address)) {
@@ -59,88 +43,6 @@ function Home() {
       setSelectedValidators([...selectedValidators, operator_address]);
     }
   };
-
-  const maxValue = balance?.formatted;
-
-  const handleMaxClick = () => {
-    console.log(balance);
-    setAmount(maxValue);
-  };
-
-  const dividedAmount = selectedValidators.length
-    ? ethers.utils.parseEther(amount).div(selectedValidators.length)
-    : ethers.utils.parseEther("0");
-
-  const { config: stakeConfig } = usePrepareContractWrite({
-    address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as any,
-    abi: MultiStaker.abi,
-    functionName: "stakeTokens",
-    args: [
-      selectedValidators,
-      Array(selectedValidators.length).fill(dividedAmount),
-    ],
-  });
-
-  const handleSelectedGroupChange = (group) => {
-    setSelectedGroup(group);
-    let selected;
-    const num = Number(numValidators);
-    switch (group) {
-      case "top":
-        selected = sortedValidators.slice(0, num);
-        break;
-      case "median":
-        const middle = Math.floor(sortedValidators.length / 2);
-        const start = Math.max(middle - Math.floor(num / 2), 0);
-        selected = sortedValidators.slice(start, start + num);
-        break;
-      case "bottom":
-        selected = sortedValidators.slice(-num);
-        break;
-      case "random":
-        selected = [];
-        while (selected.length < num) {
-          const randomValidator =
-            sortedValidators[
-              Math.floor(Math.random() * sortedValidators.length)
-            ];
-          if (!selected.includes(randomValidator)) {
-            selected.push(randomValidator);
-          }
-        }
-        break;
-      default:
-        selected = [];
-    }
-    setSelectedValidators(
-      selected.map((validator) => validator.operator_address)
-    );
-  };
-
-  const handleRangeConfirm = () => {
-    const start = Math.floor((sortedValidators.length * percentile[0]) / 100);
-    const end = Math.floor((sortedValidators.length * percentile[1]) / 100);
-    const rangeValidators = sortedValidators.slice(start, end);
-
-    let selected = [];
-    while (selected.length < numValidators) {
-      const randomValidator =
-        rangeValidators[Math.floor(Math.random() * rangeValidators.length)];
-      if (!selected.includes(randomValidator)) {
-        selected.push(randomValidator);
-      }
-    }
-    setSelectedValidators(
-      selected.map((validator) => validator.operator_address)
-    );
-  };
-
-  const {
-    data: stakeTxn,
-    isLoading: isStakeLoading,
-    isSuccess: isStakeSuccess,
-    write: stake,
-  } = useContractWrite(stakeConfig);
 
   const fetchValidators = useCallback(async () => {
     try {
@@ -183,50 +85,11 @@ function Home() {
   }, [delegatedValidators, signer]);
 
   useEffect(() => {
-    if (selectedSorting === "Commission") {
-      const sorted = [...validators].sort(
-        (a, b) =>
-          Number(a.commission.commission_rates.rate) -
-          Number(b.commission.commission_rates.rate)
-      );
-      setSortedValidators(sorted);
-    } else if (selectedSorting === "Tokens") {
-      const sorted = [...validators].sort(
-        (a, b) => Number(b.tokens) - Number(a.tokens)
-      );
-      setSortedValidators(sorted);
-    } else {
-      setSortedValidators(validators);
-    }
-  }, [selectedSorting]);
-
-  useEffect(() => {
-    if (filterJailed) {
-      setFilteredValidators(
-        sortedValidators.filter((validator) => !validator.jailed)
-      );
-    } else {
-      setFilteredValidators(sortedValidators);
-    }
-  }, [filterJailed, sortedValidators]);
-
-  useEffect(() => {
-    if (selectedSorting === "Commission") {
-      const sorted = [...validators].sort(
-        (a, b) =>
-          Number(a.commission.commission_rates.rate) -
-          Number(b.commission.commission_rates.rate)
-      );
-      setSortedValidators(sorted);
-    } else if (selectedSorting === "Tokens") {
-      const sorted = [...validators].sort(
-        (a, b) => Number(b.tokens) - Number(a.tokens)
-      );
-      setSortedValidators(sorted);
-    } else {
-      setSortedValidators(validators);
-    }
-  }, [selectedSorting]);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     fetchValidators();
@@ -253,85 +116,95 @@ function Home() {
     );
   }
 
+  if (!delegatedValidators || delegatedValidators.length === 0) {
+    <Spinner size="lg" />;
+  }
+
   return (
     <main className={styles.main}>
       <VStack className={styles.container}>
         <Box h="1rem" />
         <HStack w="100%" justifyContent="space-around">
-          <Text>My current delegation</Text>
+          <Text>Current delegation</Text>
         </HStack>
         <HStack>
-          <TableContainer height="500px" overflowY="scroll">
-            <Table variant="simple">
-              <Thead>
-                <Tr>
-                  <Th>Validator</Th>
-                  <Th>Tokens</Th>
-                  <Th>Commission</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                {delegatedValidators &&
-                  Object.keys(delegationsMap).length > 0 &&
-                  delegatedValidators.map(
-                    ({ operator_address, description, commission }) => (
-                      <Tr
-                        key={operator_address}
-                        onClick={() => handleValidatorCheck(operator_address)}
-                        className={
-                          selectedValidators.includes(operator_address)
-                            ? styles.selected
-                            : undefined
-                        }
-                      >
-                        <Td>{description.moniker}</Td>
-                        <Td>
-                          {Number(delegationsMap[operator_address]).toFixed(4)}
-                        </Td>
-                        <Td isNumeric>
-                          {(
-                            Number(commission.commission_rates.rate) * 100
-                          ).toFixed(2)}
-                          %
-                        </Td>
-                      </Tr>
-                    )
-                  )}
-              </Tbody>
-            </Table>
-          </TableContainer>
+          {isLoading ? (
+            <VStack h="480px" justifyContent="center">
+              <Spinner size="lg" />
+            </VStack>
+          ) : (
+            <TableContainer height="480px" overflowY="scroll">
+              <Table variant="simple">
+                <Thead>
+                  <Tr>
+                    <Th>Validator</Th>
+                    <Th>Tokens</Th>
+                    <Th>Commission</Th>
+                  </Tr>
+                </Thead>
+                <Tbody>
+                  {delegatedValidators &&
+                    Object.keys(delegationsMap).length > 0 &&
+                    delegatedValidators.map(
+                      ({ operator_address, description, commission }) => (
+                        <Tr
+                          key={operator_address}
+                          onClick={() => handleValidatorCheck(operator_address)}
+                          className={
+                            selectedValidators.includes(operator_address)
+                              ? styles.selected
+                              : undefined
+                          }
+                        >
+                          <Td>{description.moniker}</Td>
+                          <Td>
+                            {Number(delegationsMap[operator_address]).toFixed(
+                              4
+                            )}
+                          </Td>
+                          <Td isNumeric>
+                            {(
+                              Number(commission.commission_rates.rate) * 100
+                            ).toFixed(2)}
+                            %
+                          </Td>
+                        </Tr>
+                      )
+                    )}
+                </Tbody>
+              </Table>
+            </TableContainer>
+          )}
         </HStack>
-        <Box h="1rem" />
+        <Box h=".5rem" />
         <HStack>
           <Button
-            bgColor="teal"
+            className={styles.homeBtn}
             onClick={() => {
               router.push("/stake");
             }}
           >
-            {isStakeLoading ? <Spinner /> : "Stake"}
+            Stake
           </Button>
-          <Button bgColor="teal" onClick={() => stake?.()}>
-            {isStakeLoading ? <Spinner /> : "Unstack"}
-          </Button>
-          <Button bgColor="teal" onClick={() => stake?.()}>
-            {isStakeLoading ? <Spinner /> : "Withdraw"}
-          </Button>
-          <Button bgColor="teal" onClick={() => stake?.()}>
-            {isStakeLoading ? <Spinner /> : "Redelegate"}
-          </Button>
-        </HStack>
-        {isStakeSuccess && (
-          <VStack>
-            <Text>Staked successfully!</Text>
-            <Link
-              href={`https://testnet.escan.live/tx/${stakeTxn.hash}`}
-              isExternal
+          {["Unstake", "Withdraw", "Redelegate"].map((val) => (
+            <Button
+              key={val}
+              className={styles.homeBtn}
+              onClick={() =>
+                toast({
+                  position: "bottom",
+                  render: () => (
+                    <Box p={3} className={styles.toast}>
+                      Feature coming soon
+                    </Box>
+                  ),
+                })
+              }
             >
-              View transaction
-            </Link>
-          </VStack>
-        )}
+              {val}
+            </Button>
+          ))}
+        </HStack>
       </VStack>
     </main>
   );

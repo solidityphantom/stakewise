@@ -30,7 +30,6 @@ function Confirmation({
   const selectedValidatorObjects = selectedValidators.map(
     (s) => validatorsMap[s]
   );
-  console.log(selectedValidatorObjects);
 
   return (
     <VStack>

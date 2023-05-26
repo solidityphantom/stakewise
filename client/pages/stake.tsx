@@ -14,7 +14,7 @@ import {
   usePrepareContractWrite,
   useSigner,
 } from "wagmi";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
 import validators from "@data/validators.json";
@@ -235,7 +235,13 @@ function Home() {
   }, [delegatedValidators]);
 
   const goHome = () => router.push("/");
-  const goBack = () => setCurrentStep((prev) => prev - 1);
+  const goBack = () => {
+    if (currentStep === 0) {
+      router.push("/");
+      return;
+    }
+    setCurrentStep((prev) => prev - 1);
+  };
   const goToNextStep = () => {
     if (currentStep === 0 && (error || amount === "" || amount === "0")) {
       setError(`You must stake at least 0.001 EVMOS.`);
@@ -358,11 +364,9 @@ function Home() {
       <VStack className={styles.container}>
         {!isStakeSuccess ? (
           <HStack className={styles.stepperHeader}>
-            {currentStep > 0 ? (
-              <ChevronLeftIcon boxSize={6} onClick={goBack} cursor="pointer" />
-            ) : (
-              <Box w="26px" />
-            )}
+            <VStack pt="1rem" onClick={goBack} cursor="pointer">
+              <ChevronLeftIcon boxSize={6} />
+            </VStack>
             <ProgressBar currentStep={currentStep} totalSteps={4} />
           </HStack>
         ) : (
@@ -382,15 +386,6 @@ function Home() {
             >
               <Button className={styles.button}>View transaction</Button>
             </Link>
-          </HStack>
-        ) : currentStep === 0 ? (
-          <HStack>
-            <Button className={styles.secondaryBtn} onClick={goHome}>
-              Cancel
-            </Button>
-            <Button className={styles.button} onClick={goToNextStep}>
-              Continue
-            </Button>
           </HStack>
         ) : currentStep === 3 ? (
           <HStack>

@@ -166,6 +166,7 @@
 .stepperHeader {
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding-left: 2rem;
   padding-right: 4rem;
   padding-top: 1rem;
@@ -294,6 +295,30 @@
   text-align: center;
   font-size: 14px;
   max-width: 430px;
+}
+
+.toast {
+  height: 50px !important;
+  border-radius: 10px !important;
+  background: white !important;
+  color: #09182c !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3 ease-in-out;
+  text-align: center !important;
+  margin-bottom: 1rem;
+}
+
+.homeBtn {
+  min-width: 100px !important;
+  height: 50px !important;
+  border-radius: 30px !important;
+  background: #09182c !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3 ease-in-out;
+}
+
+.homeBtn:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .radioCard {
