@@ -130,7 +130,7 @@ function Home() {
             <VStack h="480px" justifyContent="center">
               <Spinner size="lg" />
             </VStack>
-          ) : (
+          ) : delegatedValidators && Object.keys(delegationsMap).length > 0 ? (
             <TableContainer height="480px" overflowY="scroll">
               <Table variant="simple">
                 <Thead>
@@ -172,6 +172,17 @@ function Home() {
                 </Tbody>
               </Table>
             </TableContainer>
+          ) : (
+            <VStack
+              h="480px"
+              w="300px"
+              justifyContent="center"
+              textAlign="center"
+            >
+              <Text>
+                You have no delegations on EVMOS. Please stake to continue.
+              </Text>
+            </VStack>
           )}
         </HStack>
         <Box h=".5rem" />
