@@ -2,9 +2,7 @@
 
 ## Introduction
 
-`MultiStaker` is a smart contract designed to facilitate seamless staking operations on the EVMOS network. It allows users to easily balance their stake across multiple validators based on their preferences.
-
-In essence, the contract functions as an interface between users and the validators, managing approvals for various transactions and handling the distribution of rewards. It has been carefully engineered to ensure smooth and secure operation, with an emphasis on clear, understandable code.
+`MultiStaker` is a smart contract designed to facilitate seamless staking operations to multiple validators through a single transaction on the EVMOS network. It allows users to easily balance their stake across multiple validators based on their preferences.
 
 ## Features
 

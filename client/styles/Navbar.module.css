@@ -53,3 +53,18 @@
   min-width: 150px;
   background-color: transparent;
 }
+
+.homeBtn {
+  min-width: 100px !important;
+  height: 50px !important;
+  border-radius: 30px !important;
+  background: #09182c !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3 ease-in-out;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.homeBtn:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.8);
+}

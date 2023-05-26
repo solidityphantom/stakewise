@@ -14,8 +14,8 @@ import {
   usePrepareContractWrite,
   useSigner,
 } from "wagmi";
-import { useCallback, useEffect, useState } from "react";
-import { ethers } from "ethers";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { BigNumber, ethers } from "ethers";
 import MultiStaker from "@data/MultiStaker.json";
 import validators from "@data/validators.json";
 import validatorsMap from "@data/validatorsMap.json";
@@ -53,6 +53,9 @@ function Home() {
   const [inputWidth, setInputWidth] = useState("1ch");
   const [fontSize, setFontSize] = useState("48px");
   const [isAdvancedSelection, setAdvancedSelection] = useState(false);
+  const [allowance, setAllowance] = useState<BigNumber>();
+  const [approved, setApproved] = useState<boolean>(false);
+  const [isApproveLoading, setApprovedLoading] = useState<boolean>(false);
 
   const handleValidatorCheck = useCallback(
     (operator_address: string) => {
@@ -129,6 +132,42 @@ function Home() {
     ? ethers.utils.parseEther(amount).div(selectedValidators.length)
     : ethers.utils.parseEther("0");
 
+  const fetchAllowance = useCallback(async () => {
+    try {
+      const contract = new ethers.Contract(
+        "0x02a85c9E6D859eAFAC44C3c7DD52Bbe787e54d0A",
+        MultiStaker.abi,
+        signer
+      );
+      const contractWithSigner = contract.connect(signer);
+      const result = await contractWithSigner.getAllowance();
+      setAllowance(result);
+    } catch (e) {
+      console.log(e);
+    }
+  }, [signer]);
+
+  const handleApprove = useCallback(async () => {
+    setApprovedLoading(true);
+    try {
+      const contract = new ethers.Contract(
+        "0x02a85c9E6D859eAFAC44C3c7DD52Bbe787e54d0A",
+        MultiStaker.abi,
+        signer
+      );
+      const contractWithSigner = contract.connect(signer);
+      const txn =
+        await contractWithSigner.approveAllStakingMethodsWithMaxAmount();
+
+      await txn.wait();
+      setApproved(true);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setApprovedLoading(false);
+    }
+  }, [signer]);
+
   const { config: stakeConfig } = usePrepareContractWrite({
     address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as any,
     abi: MultiStaker.abi,
@@ -186,6 +225,10 @@ function Home() {
     }
   }, [delegatedValidators, signer]);
 
+  const userNeedsApproval = useMemo(() => {
+    return allowance && allowance.isZero() && !approved;
+  }, [allowance, approved]);
+
   useEffect(() => {
     if (selectedSorting === "asc_comm") {
       const sorted = [...validators].sort(
@@ -223,6 +266,11 @@ function Home() {
       setFilteredValidators(sortedValidators);
     }
   }, [filter, sortedValidators]);
+
+  useEffect(() => {
+    fetchAllowance();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [signer]);
 
   useEffect(() => {
     fetchValidators();
@@ -392,9 +440,15 @@ function Home() {
             <Button className={styles.secondaryBtn} onClick={goHome}>
               Cancel
             </Button>
-            <Button className={styles.button} onClick={() => stake?.()}>
-              {isStakeLoading ? <Spinner color="#09182c" /> : "Stake"}
-            </Button>
+            {userNeedsApproval ? (
+              <Button className={styles.button} onClick={handleApprove}>
+                {isApproveLoading ? <Spinner color="#09182c" /> : "Approve"}
+              </Button>
+            ) : (
+              <Button className={styles.button} onClick={() => stake?.()}>
+                {isStakeLoading ? <Spinner color="#09182c" /> : "Stake"}
+              </Button>
+            )}
           </HStack>
         ) : (
           <Button className={styles.button} onClick={goToNextStep}>
